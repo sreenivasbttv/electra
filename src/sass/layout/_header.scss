@@ -1,0 +1,17 @@
+@include media-breakpoint-up(lg) {
+    .blank-menu {
+        position: fixed;
+        width: 100%;
+        background: none;
+        z-index: 999;
+        transition: .3s ease-in;
+    }
+}
+
+#block-electra-branding{
+    img{
+      width: auto;
+      height: rem(40px);
+
+    }
+}

@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * electra theme settings and preprocess functions.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Xss;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Url;
+
+
+function electra_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  // Lock Fluid container option in the General Bootstrap theme settings.
+  //$form['general']['container']['fluid_container']['#default_value'] = 1;
+  //$form['general']['container']['fluid_container']['#disabled'] = TRUE;
+  //$form['general']['container']['fluid_container']['#description'] = t('eStore theme works with fluid container only.');
+
+  // Footer copyrights settings.
+  $form['electra_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Electra Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  ];
+
+  $form['electra_settings']['header_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Header Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  ];
+  $form['electra_settings']['header_settings']['header_email'] = [
+    '#type' => 'email',
+    '#title' => t('Header email'),
+    '#default_value' => theme_get_setting('header_email'),
+    '#description' => t('Leave field blank if you want do not display email in the site header'),
+  ];
+  
+  $form['electra_settings']['copyright_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Enter copyright text'),
+    '#default_value' => theme_get_setting('copyright_text'),
+    '#description' => t('Use @year placeholder for define current year.'),
+  ];
+  $form['electra_settings']['display_theme_credits'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Display theme credits'),
+    '#default_value' => theme_get_setting('display_theme_credits'),
+  ];
+}

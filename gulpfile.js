@@ -41,7 +41,8 @@ var paths = {
     },
     libs: {
       js: [
-        'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js.map'
       ],
       css: [
         'node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css'
@@ -199,7 +200,7 @@ gulp.task('styles:prod', function () {
 
 // watching sass files
 gulp.task('watch:styles', function () {
-  gulp.watch(paths.sass, gulp.series('sass'));
+  gulp.watch(paths.dirs.source+'/**/*.scss', gulp.series('sass'));
 });
 // watching scripts and other files
 gulp.task('watch:code', function () {

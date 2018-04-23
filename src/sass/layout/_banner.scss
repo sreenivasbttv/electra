@@ -1,0 +1,309 @@
+/*==================================
+    12.slider banner
+====================================*/
+/*----------------------------------
+ 12.1 seo Banner
+----------------------------------*/
+
+.slider-banner-inner {
+  height: 860px !important;
+}
+
+.first-slide {
+  background: #fcb03b;
+}
+
+.second-slide {
+  background: #fd4b4b;
+  img {
+    width: 100%;
+    width: 100%;
+    max-width: 730px;
+  }
+}
+
+.third-slide {
+  background: #3cb878;
+}
+
+.seo-slider-btn {
+  background: #fff !important;
+  border: 0px;
+  color: #222;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 15px 30px;
+  width: auto;
+  height: auto;
+  border: 2px solid #222;
+}
+
+.inner-carousal-1 {
+  h4 {
+    padding: 10px 0 20px;
+    color: #fff;
+  }
+  h5 {
+    color: #222;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.side-content-wrapper-1 {
+  width: 100%;
+  max-width: 550px;
+  padding: 50px 25px;
+  span {
+    font-weight: 200;
+  }
+}
+
+.seo-slider-main-wrapper {
+  .carousel-control-next, .carousel-control-prev {
+    width: 10%;
+  }
+}
+
+.inner-carousal-content-1 {
+  width: 100%;
+  max-width: 850px;
+  margin-bottom: 20px;
+  padding: 25px;
+  h2 span {
+    font-weight: 400;
+  }
+  h6 {
+    font-weight: 400;
+    line-height: 25px;
+  }
+}
+
+/*----------------------------------
+ 12.2 saas Banner
+----------------------------------*/
+
+.saas-slider-main-wrapper {
+  height: 100%;
+  .carousel {
+    height: 100%;
+    .carousel-item, .carousel-inner, .first-slide, .second-slide, .third-slide {
+      height: 100%;
+    }
+    .first-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-1.jpg") no-repeat (center / cover);
+    }
+    .second-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-2.jpg") no-repeat (center / cover);
+    }
+    .third-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-3.jpg") no-repeat (center / cover);
+    }
+  }
+}
+
+.agency-entry-content {
+  h2 {
+    color: #fff;
+    span {
+      font-weight: 300;
+      display: block;
+    }
+  }
+  h4 {
+    font-weight: 300;
+  }
+  a {
+    box-shadow: none !important;
+  }
+  p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    color: #eee;
+  }
+}
+
+.seo-slider-main-wrapper .inner-carousal-1 h2, .saas-slider-main-wrapper .agency-entry-content h2 {
+  animation-delay: .5s;
+}
+
+.seo-slider-main-wrapper .inner-carousal-1 h4, .saas-slider-main-wrapper .agency-entry-content h4 {
+  animation-delay: .7s;
+}
+
+.seo-slider-main-wrapper .inner-carousal-1 {
+  h5, h6 {
+    animation-delay: .9s;
+  }
+}
+
+.saas-slider-main-wrapper .agency-entry-content p {
+  animation-delay: .9s;
+}
+
+.seo-slider-main-wrapper .inner-carousal-1 button, .saas-slider-main-wrapper .agency-entry-content a {
+  animation-delay: 1s;
+}
+
+.saa-slider-v1 {
+  .saas-inner-slider .agency-entry-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+  }
+  position: relative;
+  .agency-entry-content img {
+    margin-top: 50px;
+  }
+}
+
+.saas-mobile img {
+  width: 260px;
+}
+
+.saas-desk {
+  padding: 60px 0;
+}
+
+/*--------------------------------------------
+   12.3 parallex-banner
+  --------------------------------------------*/
+
+.parallex-banner .first-slide {
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/parallex-banner.jpg) no-repeat center (top / cover);
+  background-attachment: fixed;
+}
+
+/*--------------------------------------------
+  12.4 typing-banner
+  --------------------------------------------*/
+
+#typed {
+  white-space: pre;
+}
+
+.typing-banner .type-wrap {
+  h2 {
+    display: inline-block;
+  }
+  span#typed {
+    font-size: 45px !important;
+    color: #fff;
+    padding-left: 10px;
+  }
+}
+
+span.typed-cursor {
+  font-size: 40px !important;
+  color: #fff;
+}
+
+/*--------------------------------------------
+  12.5 video-banner
+  --------------------------------------------*/
+
+.home-banner.video-option {
+  height: 860px !important;
+}
+
+.video-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  .agency-entry-content {
+    padding: 50px 0;
+    h4 {
+      color: #eee;
+    }
+  }
+}
+
+.video-inner-mock {
+  width: 100%;
+  height: 100%;
+}
+
+/*--------------------------------------------
+  12.6 gradient-banner
+  --------------------------------------------*/
+
+.gradient-banner {
+  width: 100%;
+  .first-slide {
+    width: 100%;
+    background: linear-gradient(-45deg, #E91E63, #673AB7, #00BCD4, #FFEE58);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+  }
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.gradient-inner .agency-entry-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 20px;
+  a {
+    margin: 20px 0 60px;
+  }
+  h2 span {
+    display: inline-block;
+  }
+}

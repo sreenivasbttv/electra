@@ -1,0 +1,36 @@
+{%
+  set body_classes = [auth-wrapper]
+%}
+
+<div class="d-md-flex flex-row-reverse electra-signin">
+      <div class="section-right">
+
+        <div class="c-box">
+        <a href="/">
+<img alt="{{ site_name }}" src="{{ logo }}" >
+</a>
+          <h2 class="signin-title-primary">Welcome back!</h2>
+          <h3 class="signin-title-secondary">Sign in to continue.</h3>
+
+          {{ messages }}
+
+    {{ page.content }}
+
+          <p class="mg-b-0">Don't have an account? <a href="/user/register">Create account</a></p>
+        </div>
+
+      </div><!-- signin-right -->
+      <div class="section-left">
+        <div class="c-box">
+          <h2 class="slim-logo"><a href="/">Electra<span>.</span></a></h2>
+
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+
+          <p>Browse our site and see for yourself why you need Slim.</p>
+
+          <p><a href="" class="btn btn-outline-secondary pd-x-25">Learn More</a></p>
+
+          <p class="tx-12">© Copyright 2018. All Rights Reserved.</p>
+        </div>
+      </div><!-- signin-left -->
+    </div>

@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i");
 /*!
- * Electra v1.0.01
+ * Electra v1.0.0
  * Copyright 2018 The Electra Authors
  * Licensed under MIT
  */
@@ -6265,5 +6269,549 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
+
+ul.social-icons {
+  padding: 0px;
+  margin-bottom: 0px; }
+  ul.social-icons li {
+    display: inline-block; }
+    ul.social-icons li a {
+      font-size: 18px;
+      padding: 10px;
+      color: #aaa;
+      display: block;
+      transition: ease-in .2s; }
+
+.element-section-wrapper {
+  padding: 40px 0 30px;
+  border-bottom: 1px solid #eee; }
+
+.element-section-wrapper-spl {
+  padding: 40px 0 45px; }
+
+/*-- 05.19.1 HOVER ICONS ---*/
+ul.social-icons.hover-icons li a:hover {
+  color: #000; }
+
+ul.social-icons.brand-color-icons li a.fbook, ul.social-icons.brand-hover-icons li a.fbook:hover {
+  color: #3b5998; }
+
+ul.social-icons.brand-color-icons li a.google, ul.social-icons.brand-hover-icons li a.google:hover {
+  color: #d34836; }
+
+ul.social-icons.brand-color-icons li a.twr, ul.social-icons.brand-hover-icons li a.twr:hover {
+  color: #1dcaff; }
+
+ul.social-icons.brand-color-icons li a.lin, ul.social-icons.brand-hover-icons li a.lin:hover {
+  color: #0e76a8; }
+
+ul.social-icons.brand-color-icons li a.pin, ul.social-icons.brand-hover-icons li a.pin:hover {
+  color: #C92228; }
+
+ul.social-icons.brand-color-icons li a.vim, ul.social-icons.brand-hover-icons li a.vim:hover {
+  color: #162221; }
+
+ul.social-icons.brand-color-icons li a.sky, ul.social-icons.brand-hover-icons li a.sky:hover {
+  color: #12A5F4; }
+
+ul.social-icons.brand-color-icons li a.yt, ul.social-icons.brand-hover-icons li a.yt:hover {
+  color: #c4302b; }
+
+ul.social-icons.brand-color-icons li a.andro, ul.social-icons.brand-hover-icons li a.andro:hover {
+  color: #34af23; }
+
+ul.social-icons.brand-color-icons li a.flick, ul.social-icons.brand-hover-icons li a.flick:hover {
+  color: #ff0084; }
+
+ul.social-icons.brand-color-icons li a.insta, ul.social-icons.brand-hover-icons li a.insta:hover {
+  color: #8a3ab9; }
+
+ul.social-icons.brand-color-icons li a.git, ul.social-icons.brand-hover-icons li a.git:hover {
+  color: #333; }
+
+ul.social-icons.brand-color-icons li a.sht, ul.social-icons.brand-hover-icons li a.sht:hover {
+  color: #acde5e; }
+
+ul.social-icons.simple-border-icons li a {
+  border: 1px solid #ccc;
+  line-height: 0px; }
+
+ul.social-icons.round-border-icons li a {
+  border: 1px solid #ccc;
+  line-height: 0px;
+  border-radius: 50px; }
+
+ul.social-icons.simple-bg-icons li a {
+  color: #000;
+  border: 1px solid #000; }
+  ul.social-icons.simple-bg-icons li a:hover {
+    background: #000;
+    color: #fff; }
+
+ul.social-icons.black-icon li a {
+  color: #000; }
+
+/*-- 05.19.2 BRAND HOVER ICONS  ---*/
+/*-- 05.19.3 SIMPLE BORDER ICONS  ---*/
+/*-- 05.19.4 ROUND BORDER ICONS  ---*/
+/*-- 05.19.5 SIMPLE BG ICONS  ---*/
+/*icon-sm*/
+/*-- 05.19.6 Brand bg icons  ---*/
+.brand-bg-icons a {
+  color: #fff !important;
+  line-height: 0px; }
+  .brand-bg-icons a.fbook {
+    background: #3b5998; }
+  .brand-bg-icons a.google {
+    background: #d34836; }
+  .brand-bg-icons a.twr {
+    background: #1dcaff; }
+  .brand-bg-icons a.lin {
+    background: #0e76a8; }
+  .brand-bg-icons a.pin {
+    background: #C92228; }
+  .brand-bg-icons a.vim {
+    background: #162221; }
+  .brand-bg-icons a.sky {
+    background: #12A5F4; }
+  .brand-bg-icons a.yt {
+    background: #c4302b; }
+  .brand-bg-icons a.andro {
+    background: #34af23; }
+  .brand-bg-icons a.flick {
+    background: #ff0084; }
+  .brand-bg-icons a.insta {
+    background: #8a3ab9; }
+  .brand-bg-icons a.git {
+    background: #333; }
+  .brand-bg-icons a.sht {
+    background: #acde5e; }
+
+/*-- 05.19.7 outline Brand bg icons  ---*/
+.outline-brand-icons a {
+  line-height: 0px; }
+  .outline-brand-icons a.fbook {
+    border: 1px solid #3b5998 !important; }
+    .outline-brand-icons a.fbook:hover {
+      background: #3b5998 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.google {
+    border: 1px solid #d34836 !important; }
+    .outline-brand-icons a.google:hover {
+      background: #d34836 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.twr {
+    border: 1px solid #1dcaff !important; }
+    .outline-brand-icons a.twr:hover {
+      background: #1dcaff !important;
+      color: #fff !important; }
+  .outline-brand-icons a.lin {
+    border: 1px solid #0e76a8 !important; }
+    .outline-brand-icons a.lin:hover {
+      background: #0e76a8 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.pin {
+    border: 1px solid #C92228 !important; }
+    .outline-brand-icons a.pin:hover {
+      background: #C92228 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.vim {
+    border: 1px solid #162221 !important; }
+    .outline-brand-icons a.vim:hover {
+      background: #162221 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.sky {
+    border: 1px solid #12A5F4 !important; }
+    .outline-brand-icons a.sky:hover {
+      background: #12A5F4 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.yt {
+    border: 1px solid #c4302b !important; }
+    .outline-brand-icons a.yt:hover {
+      background: #c4302b !important;
+      color: #fff !important; }
+  .outline-brand-icons a.andro {
+    border: 1px solid #34af23 !important; }
+    .outline-brand-icons a.andro:hover {
+      background: #34af23 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.flick {
+    border: 1px solid #ff0084 !important; }
+    .outline-brand-icons a.flick:hover {
+      background: #ff0084 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.insta {
+    border: 1px solid #8a3ab9 !important; }
+    .outline-brand-icons a.insta:hover {
+      background: #8a3ab9 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.git {
+    border: 1px solid #333 !important; }
+    .outline-brand-icons a.git:hover {
+      background: #333 !important;
+      color: #fff !important; }
+  .outline-brand-icons a.sht {
+    border: 1px solid #acde5e !important; }
+    .outline-brand-icons a.sht:hover {
+      background: #acde5e !important;
+      color: #fff !important; }
+
+/*-- 05.19.8 with border radius icons  ---*/
+.with-radius-icons a {
+  border-radius: 5px; }
+
+.brand-bg-icons.round-border-icons a {
+  border: 0px !important; }
+
+/*-- 05.19.9 BUTTON SIZE  ---*/
+ul.social-icons.icon-sm li a {
+  font-size: 14px; }
+
+ul.social-icons.icon-md li a {
+  font-size: 20px; }
+
+ul.social-icons.icon-lg li a {
+  font-size: 23px; }
+
+/*==================================
+    12.slider banner
+====================================*/
+/*----------------------------------
+ 12.1 seo Banner
+----------------------------------*/
+.slider-banner-inner {
+  height: 860px !important; }
+
+.first-slide {
+  background: #fcb03b; }
+
+.second-slide {
+  background: #fd4b4b; }
+  .second-slide img {
+    width: 100%;
+    width: 100%;
+    max-width: 730px; }
+
+.third-slide {
+  background: #3cb878; }
+
+.seo-slider-btn {
+  background: #fff !important;
+  border: 0px;
+  color: #222;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 15px 30px;
+  width: auto;
+  height: auto;
+  border: 2px solid #222; }
+
+.inner-carousal-1 h4 {
+  padding: 10px 0 20px;
+  color: #fff; }
+
+.inner-carousal-1 h5 {
+  color: #222;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px; }
+
+.side-content-wrapper-1 {
+  width: 100%;
+  max-width: 550px;
+  padding: 50px 25px; }
+  .side-content-wrapper-1 span {
+    font-weight: 200; }
+
+.seo-slider-main-wrapper .carousel-control-next, .seo-slider-main-wrapper .carousel-control-prev {
+  width: 10%; }
+
+.inner-carousal-content-1 {
+  width: 100%;
+  max-width: 850px;
+  margin-bottom: 20px;
+  padding: 25px; }
+  .inner-carousal-content-1 h2 span {
+    font-weight: 400; }
+  .inner-carousal-content-1 h6 {
+    font-weight: 400;
+    line-height: 25px; }
+
+/*----------------------------------
+ 12.2 saas Banner
+----------------------------------*/
+.saas-slider-main-wrapper {
+  height: 100%; }
+  .saas-slider-main-wrapper .carousel {
+    height: 100%; }
+    .saas-slider-main-wrapper .carousel .carousel-item, .saas-slider-main-wrapper .carousel .carousel-inner, .saas-slider-main-wrapper .carousel .first-slide, .saas-slider-main-wrapper .carousel .second-slide, .saas-slider-main-wrapper .carousel .third-slide {
+      height: 100%; }
+    .saas-slider-main-wrapper .carousel .first-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-1.jpg") no-repeat center/cover; }
+    .saas-slider-main-wrapper .carousel .second-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-2.jpg") no-repeat center/cover; }
+    .saas-slider-main-wrapper .carousel .third-slide {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/agency-3.jpg") no-repeat center/cover; }
+
+.agency-entry-content h2 {
+  color: #fff; }
+  .agency-entry-content h2 span {
+    font-weight: 300;
+    display: block; }
+
+.agency-entry-content h4 {
+  font-weight: 300; }
+
+.agency-entry-content a {
+  box-shadow: none !important; }
+
+.agency-entry-content p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  color: #eee; }
+
+.seo-slider-main-wrapper .inner-carousal-1 h2, .saas-slider-main-wrapper .agency-entry-content h2 {
+  animation-delay: .5s; }
+
+.seo-slider-main-wrapper .inner-carousal-1 h4, .saas-slider-main-wrapper .agency-entry-content h4 {
+  animation-delay: .7s; }
+
+.seo-slider-main-wrapper .inner-carousal-1 h5, .seo-slider-main-wrapper .inner-carousal-1 h6 {
+  animation-delay: .9s; }
+
+.saas-slider-main-wrapper .agency-entry-content p {
+  animation-delay: .9s; }
+
+.seo-slider-main-wrapper .inner-carousal-1 button, .saas-slider-main-wrapper .agency-entry-content a {
+  animation-delay: 1s; }
+
+.saa-slider-v1 {
+  position: relative; }
+  .saa-slider-v1 .saas-inner-slider .agency-entry-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0; }
+  .saa-slider-v1 .agency-entry-content img {
+    margin-top: 50px; }
+
+.saas-mobile img {
+  width: 260px; }
+
+.saas-desk {
+  padding: 60px 0; }
+
+/*--------------------------------------------
+   12.3 parallex-banner
+  --------------------------------------------*/
+.parallex-banner .first-slide {
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/parallex-banner.jpg) no-repeat center top/cover;
+  background-attachment: fixed; }
+
+/*--------------------------------------------
+  12.4 typing-banner
+  --------------------------------------------*/
+#typed {
+  white-space: pre; }
+
+.typing-banner .type-wrap h2 {
+  display: inline-block; }
+
+.typing-banner .type-wrap span#typed {
+  font-size: 45px !important;
+  color: #fff;
+  padding-left: 10px; }
+
+span.typed-cursor {
+  font-size: 40px !important;
+  color: #fff; }
+
+/*--------------------------------------------
+  12.5 video-banner
+  --------------------------------------------*/
+.home-banner.video-option {
+  height: 860px !important; }
+
+.video-banner-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%; }
+  .video-banner-overlay .agency-entry-content {
+    padding: 50px 0; }
+    .video-banner-overlay .agency-entry-content h4 {
+      color: #eee; }
+
+.video-inner-mock {
+  width: 100%;
+  height: 100%; }
+
+/*--------------------------------------------
+  12.6 gradient-banner
+  --------------------------------------------*/
+.gradient-banner {
+  width: 100%; }
+  .gradient-banner .first-slide {
+    width: 100%;
+    background: linear-gradient(-45deg, #E91E63, #673AB7, #00BCD4, #FFEE58);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite; }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.gradient-inner .agency-entry-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 20px; }
+  .gradient-inner .agency-entry-content a {
+    margin: 20px 0 60px; }
+  .gradient-inner .agency-entry-content h2 span {
+    display: inline-block; }
+
+.normal-footer {
+  border-top: 1px solid #eee; }
+  .normal-footer ul {
+    padding: 0px !important; }
+  .normal-footer li {
+    list-style: none;
+    padding-bottom: 5px; }
+    .normal-footer li a {
+      font-size: 14px;
+      color: #514747; }
+      .normal-footer li a:hover {
+        color: #000; }
+
+.quick-list h5 {
+  padding-bottom: 10px; }
+
+.quick-list p {
+  color: #514747; }
+
+.email-sub input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ececec; }
+
+.email-sub a {
+  background: #444;
+  color: #fff;
+  margin-top: 12px; }
+
+.saas-footer {
+  padding: 20px 0;
+  background-color: #fff; }
+
+footer .saas-footer {
+  padding: 10px 0; }
+
+footer.saas-footer .col-md-6 .copy-protector p, footer .saas-footer .col-md-6 .copy-protector p {
+  margin-bottom: 0px !important; }
+
+.seo-footer {
+  background: #151414; }
+  .seo-footer .logo-brand.sm-logo h3, .seo-footer ul.social-icons.black-icon li a, .seo-footer .footer-menu-list li a:hover {
+    color: #fff; }
+
+footer .social-icons {
+  margin-bottom: 0px; }
+
+.logo-brand h3 {
+  margin-bottom: 0px;
+  line-height: 45px; }
+  .logo-brand h3 span {
+    font-weight: 400; }
+
+.logo-brand.sm-logo h3 {
+  font-size: 23px;
+  padding-bottom: 5px; }
+
+.footer-menu-list {
+  padding: 0px;
+  text-align: center;
+  margin-bottom: 0px; }
+  .footer-menu-list li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 10px; }
+    .footer-menu-list li a {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #666; }
+
+.small-footer {
+  padding: 10px 0;
+  background-color: #fff; }
+  .small-footer p {
+    margin-bottom: 0px; }
+
+@media (min-width: 992px) {
+  .blank-menu {
+    position: fixed;
+    width: 100%;
+    background: none;
+    z-index: 999;
+    transition: .3s ease-in; } }
+
+#block-electra-branding img {
+  width: auto;
+  height: 2.5rem; }
+
+.electra-signin .section-left,
+.electra-signin .section-right {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; }
+
+.electra-signin {
+  background-color: #f0f2f7; }
+  @media (min-width: 768px) {
+    .electra-signin .section-left,
+    .electra-signin .section-right {
+      width: 50%; } }
+  .electra-signin .section-left .c-box,
+  .electra-signin .section-right .c-box {
+    border: 0;
+    padding: 0;
+    width: 400px; }
+  .electra-signin .section-right {
+    background-color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,3 +4,19 @@ base theme: false
 description: A Blog & multipurpose bootstrap 4 based theme
 package: 'Electra'
 core: 8.x
+
+libraries:
+  - electra/global-styling
+
+regions:
+  header_left: 'Header Left'
+  navigation: 'Main Navigation'
+  header_right: 'Header Right'
+  content_top: 'Page top'
+  content: 'Content' #required!
+  content_bottom: 'Page bottom'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  footer_left: 'Footer Left'
+  footer_middle: 'Footer Middle'
+  footer_right: 'Footer Right'

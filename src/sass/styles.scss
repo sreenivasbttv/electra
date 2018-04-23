@@ -1,3 +1,5 @@
+@import 'base/**/*';
+
 // Vendor
 //
 // Styles from 3rd party frameworks
@@ -6,3 +8,7 @@
 //
 // Style guide: base
 @import 'vendor/**/*';
+
+@import 'components/**/*';
+@import 'layout/**/*';
+@import 'pages/**/*';

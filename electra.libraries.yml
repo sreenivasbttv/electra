@@ -1,0 +1,12 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      dist/css/styles.css: {}
+      dist/vendor/css/fontawesome.css: {}
+  js:
+    dist/vendor/js/bootstrap.bundle.js: {}
+    dist/js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal  
