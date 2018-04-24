@@ -6798,10 +6798,10 @@ footer .social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px; }
+  padding: 1.875rem; }
 
 .electra-signin {
-  background-color: #f0f2f7; }
+  background-color: #f8f9fa; }
   @media (min-width: 768px) {
     .electra-signin .section-left,
     .electra-signin .section-right {
@@ -6810,8 +6810,6 @@ footer .social-icons {
   .electra-signin .section-right .c-box {
     border: 0;
     padding: 0;
-    width: 400px; }
+    width: 25rem; }
   .electra-signin .section-right {
     background-color: #fff; }
-
-/*# sourceMappingURL=styles.css.map */
