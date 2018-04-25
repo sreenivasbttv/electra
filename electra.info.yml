@@ -12,9 +12,11 @@ regions:
   header_left: 'Header Left'
   navigation: 'Main Navigation'
   header_right: 'Header Right'
-  page_top: 'Page top'
+  content_top_fluid: 'Page top Full Width'
+  content_top: 'Page top'
   content: 'Content' #required!
-  page_bottom: 'Page bottom'
+  content_bottom: 'Page bottom'
+  content_bottom_fluid: 'Page bottom Full Width'
   sidebar_first: 'Left Sidebar'
   sidebar_second: 'Right Sidebar'
   footer_left: 'Footer Left'

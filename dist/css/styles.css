@@ -6779,16 +6779,19 @@ footer .social-icons {
     margin-bottom: 0px; }
 
 @media (min-width: 992px) {
-  .blank-menu {
+  .top-header.blank-menu {
     position: fixed;
     width: 100%;
     background: none;
     z-index: 999;
     transition: .3s ease-in; } }
 
-#block-electra-branding img {
+.top-header #block-electra-branding img {
   width: auto;
   height: 2.5rem; }
+
+.top-header #navigation-group .m-nav {
+  margin: auto; }
 
 .electra-signin .section-left,
 .electra-signin .section-right {
