@@ -28,6 +28,12 @@ use Drupal\Core\Url;
 
  }
 
+ function electra_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
  /**
  * Provides theme settings for Electra theme. Implements hook_form_FORM_ID_alter()
  */
