@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:electra_parallax:74da3459-ff44-4c91-88dd-87a99b2a78f0'
+  module:
+    - block_content
+    - system
+  theme:
+    - electra
+id: sampleparallaxgradientblock
+theme: electra
+region: content_top_fluid
+weight: 0
+provider: null
+plugin: 'block_content:74da3459-ff44-4c91-88dd-87a99b2a78f0'
+settings:
+  id: 'block_content:74da3459-ff44-4c91-88dd-87a99b2a78f0'
+  label: 'Sample Parallax Gradient Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

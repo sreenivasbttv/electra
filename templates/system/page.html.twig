@@ -34,38 +34,15 @@
     <!-- end of container -->
 </nav>
 <!-- end of nav -->
-<!-- =============================== banner-slider ===============================-->
-<div class="main-container seo-slider-main-wrapper saas-slider-main-wrapper gradient-banner aos-box">
-    <div class="first-slide slider-banner-inner parallex-banner-inner d-flex" data-stellar-background-ratio="0.3">
-        <div class="inner-carousal-1 text-left">
-            <div class="containet">
-                <div class="row">
-                    <div class="gradient-inner">
-                        <div class="agency-entry-content text-center">
-                            <h2 data-animation="animated fadeInUp">
-                                <span>Electra</span>
-                                Drupal 8 theme</h2>
-                            <h4 data-animation="animated fadeInUp">A Multipurpose customized Bootstrap 4 version</h4>
-                            <a href="#" data-animation="animated fadeInUp" class="btn auto-width try-btn">More details</a><br>
-                            <img src="images/banner-1-saas.jpg" data-aos="fade-up" data-aos-duration="1200" class="img-fluid" alt="">
-                        </div>
-                        <!-- end of agency-entry-content -->
-                    </div>
-                    <!-- end of gradient-inner -->
-                </div>
-                <!-- end of row -->
-            </div>
-            <!-- end of container -->
-        </div>
-        <!-- end of inner-carousal-1 -->
-    </div>
-    <!-- /.container -->
-</div>
-<!-- end of main-container -->
+
+<!-- ================================ top Fluid section ===============================-->
+ {% if page.content_top_fluid %}
+    {{ page.content_top_fluid }}
+{% endif %}
+<!-- end top fluid section -->
 
 <section>
     <div class="container">
-
         {{ page.content }}
     </div>
 </section>
