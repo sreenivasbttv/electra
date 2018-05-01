@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Electra theme.
+
+electra.settings:
+  type: theme_settings
+  label: 'Electra settings'

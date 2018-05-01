@@ -35,6 +35,12 @@
 </nav>
 <!-- end of nav -->
 
+<!-- ================================ If sample blocks enable ===============================-->
+{% if electra.display_sample_blocks %}
+{{ include('@electra/samples/parallax-block.html', ignore_missing = true) }}
+{% endif %}
+<!-- end sample blocks enable -->
+
 <!-- ================================ top Fluid section ===============================-->
  {% if page.content_top_fluid %}
     {{ page.content_top_fluid }}

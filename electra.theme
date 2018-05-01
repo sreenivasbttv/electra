@@ -34,14 +34,61 @@ use Drupal\Core\Url;
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function electra_preprocess_page(&$variables) {
+  $variables['electra'] = [];
+  $electra_settings = [
+    'display_sample_blocks',
+    'user_page_intro',
+    'header_color',
+    'header_type',
+    'header_type_sticky',
+    'header_type_sticky_resize',
+  ];
+  $social_profiles = [
+    'social_facebook',
+    'social_googleplus',
+    'social_linkedin',
+    'social_twitter',
+    'social_youtube',
+  ];
+  // Retrieve General and Header options
+  foreach ($electra_settings as $electra_setting) {
+    $value = trim(theme_get_setting($electra_setting));
+    if (!empty($value)) {
+      $variables['electra'][$electra_setting] = Xss::filter($value);
+    }
+  }
+  // Retrieve social profiles
+  foreach ($social_profiles as $social_profile) {
+    $value = trim(theme_get_setting($social_profile));
+    if (!empty($value)) {
+      $variables['electra']['social_profiles'][$social_profile] = Xss::filter($value);
+    }
+  }
+  
+  // Process Copyright text
+  $copyright_text = theme_get_setting('copyright_text');
+  if (!empty($copyright_text)) {
+    $copyright_text = str_replace('@year', date('Y'), theme_get_setting('copyright_text'));
+    $variables['electra']['copyright_text'] = $copyright_text;
+  }
+  // Process theme credits
+  $display_theme_credits = theme_get_setting('display_theme_credits');
+  if (!empty($display_theme_credits)) {
+    $variables['electra']['theme_credits']['#markup'] = t(
+      'Build with love by <a href="@url">Sreenivas Bttv</a>',
+      ['@url' => 'http://www.bttvs.com']
+    );
+  }
+}
+
  /**
  * Provides theme settings for Electra theme. Implements hook_form_FORM_ID_alter()
  */
 function electra_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  // Lock Fluid container option in the General Bootstrap theme settings.
-  //$form['general']['container']['fluid_container']['#default_value'] = 1;
-  //$form['general']['container']['fluid_container']['#disabled'] = TRUE;
-  //$form['general']['container']['fluid_container']['#description'] = t('eStore theme works with fluid container only.');
 
   // Footer copyrights settings.
   $form['electra_settings'] = [
@@ -64,20 +111,60 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#group' => 'tabs'
   ];
 
-  $form['electra_settings']['general_tab']['general_options']['user_intro'] = [
-    '#type' => 'textarea',
-    '#title' => t('User Intro'),
-    '#default_value' => theme_get_setting('user_intro'),
+  $form['electra_settings']['general_tab']['general_options']['display_sample_blocks'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show Sample Blocks'),
+    '#default_value' => theme_get_setting('display_sample_blocks', 'electra'),
+    '#description' => t('Just shows sample blocks for your idea. On production disable this'),
+  ];
+
+  $form['electra_settings']['general_tab']['general_options']['user_page_intro'] = [
+    '#type' => 'text_format',
+    '#title' => t('User Page Intro'),
+    '#format' => 'full_html',
+    '#default_value' => theme_get_setting('user_page_intro', 'electra'),
     '#description' => t('Text will be shown on left side of login, registration, forgot password pages.'),
   ];
 
-  $form['electra_settings']['general_tab']['general_options']['header_email'] = [
-    '#type' => 'email',
-    '#title' => t('Header email'),
-    '#default_value' => theme_get_setting('header_email'),
-    '#description' => t('Leave field blank if you want do not display email in the site header'),
+  $form['electra_settings']['header_tab']['header_options'] = [
+    '#type' => 'details',
+    '#title' => t('Header Options'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs'
   ];
 
+  $form['electra_settings']['header_tab']['header_options']['header_color'] = [
+    '#type' => 'color',
+    '#title' => t('Header Color'),
+    '#default_value' => theme_get_setting('header_color', 'electra'),
+    '#description' => t('Choose color that applies to header as background color.'),
+  ];
+
+  $form['electra_settings']['header_tab']['header_options']['header_type'] = array(
+    '#type' => 'select',
+    '#title' => t('Header Type'),
+    '#description'   => t('Choose header type. If you choose overlay, then header will be overlaid over the below section/content.'),
+    '#default_value' => theme_get_setting('header_type', 'electra'),
+    '#options' => array(
+    'standard-light' => t('Standard'),
+    'overlay-light' => t('Overlay'),
+    ),
+  );
+
+  $form['electra_settings']['header_tab']['header_options']['header_type_sticky'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Sticky Header'),
+    '#default_value' => theme_get_setting('header_type_sticky', 'electra'),
+    '#description' => t('Enable the sticky header when scrolling down the page'),
+  ];
+
+  $form['electra_settings']['header_tab']['header_options']['header_type_sticky_resize'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Sticky header resizing'),
+    '#default_value' => theme_get_setting('header_type_sticky_resize', 'electra'),
+    '#description' => t('Enable the sticky header to resize when scrolling down the page'),
+  ];
 
   $form['electra_settings']['social_tab']['social_profiles'] = [
     '#type' => 'details',
@@ -90,14 +177,14 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['electra_settings']['social_tab']['social_profiles']['social_facebook'] = [
     '#type' => 'textfield',
     '#title' => t('Facebook'),
-    '#default_value' => theme_get_setting('social_facebook'),
+    '#default_value' => theme_get_setting('social_facebook', 'electra'),
     '#description' => t('Your facebook page/profile url'),
   ];
 
   $form['electra_settings']['social_tab']['social_profiles']['social_googleplus'] = [
     '#type' => 'textfield',
     '#title' => t('Google+'),
-    '#default_value' => theme_get_setting('social_googleplus'),
+    '#default_value' => theme_get_setting('social_googleplus', 'electra'),
     '#description' => t('Your Google+ page/profile URL'),
   ];
 
@@ -105,7 +192,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['electra_settings']['social_tab']['social_profiles']['social_linkedin'] = [
     '#type' => 'textfield',
     '#title' => t('LinkedIn'),
-    '#default_value' => theme_get_setting('social_linkedin'),
+    '#default_value' => theme_get_setting('social_linkedin', 'electra'),
     '#description' => t('Your LinkedIn page/profile url'),
   ];
 
@@ -113,14 +200,14 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['electra_settings']['social_tab']['social_profiles']['social_twitter'] = [
     '#type' => 'textfield',
     '#title' => t('Twitter'),
-    '#default_value' => theme_get_setting('social_twitter'),
+    '#default_value' => theme_get_setting('social_twitter', 'electra'),
     '#description' => t('Your Twitter username (no @).'),
   ];  
 
   $form['electra_settings']['social_tab']['social_profiles']['social_youtube'] = [
     '#type' => 'textfield',
     '#title' => t('Youtube'),
-    '#default_value' => theme_get_setting('social_youtube'),
+    '#default_value' => theme_get_setting('social_youtube', 'electra'),
     '#description' => t('Your YouTube URL'),
   ];
 
@@ -138,7 +225,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['electra_settings']['footer_tab']['footer_options']['copyright_text'] = [
     '#type' => 'textfield',
     '#title' => t('Enter copyright text'),
-    '#default_value' => theme_get_setting('copyright_text'),
+    '#default_value' => theme_get_setting('copyright_text', 'electra'),
     '#description' => t('The copyright text that appears in the footer. Use @year placeholder for define current year.'),
   ];
 
@@ -152,7 +239,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   $form['electra_settings']['footer_tab']['footer_options']['backlink_container']['display_theme_credits'] = [
     '#type' => 'checkbox',
     '#title' => t('Display theme credits'),
-    '#default_value' => theme_get_setting('display_theme_credits'),
+    '#default_value' => theme_get_setting('display_theme_credits', 'electra'),
     '#description' => t('If checked, a backlink to our site will be shown in the footer. This is not compulsory, but always appreciated!'),
   ];
 }

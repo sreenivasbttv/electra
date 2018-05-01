@@ -1,0 +1,8 @@
+display_sample_blocks: true
+user_page_intro: '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p> <p>Browse our site and see for yourself why you need Electra.</p> <p> <a href="#" class="btn btn-outline-secondary pd-x-25">Go Home</a> </p>'
+header_color: '#ffffff'
+header_type: 'overlay-light'
+header_type_sticky: true
+header_type_sticky_resize: true
+copyright_text : '© Copyright @year. All Rights Reserved'
+display_theme_credits : true 
