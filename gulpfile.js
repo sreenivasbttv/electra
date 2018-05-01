@@ -46,6 +46,9 @@ var paths = {
       ],
       css: [
         'node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css'
+      ],
+      fonts: [
+        'node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*'
       ]
     }
   },
@@ -166,8 +169,13 @@ gulp.task('vendor:css', function () {
     .pipe(gulp.dest(paths.dirs.build + '/vendor/css'));
 });
 
+gulp.task('vendor:fonts', function () {
+  return gulp.src(paths.vendor.libs.fonts)
+    .pipe(gulp.dest(paths.dirs.build + '/vendor/fonts'));
+});
+
 gulp.task('vendor', gulp.parallel(
-  'vendor:components', 'vendor:js', 'vendor:css'
+  'vendor:components', 'vendor:js', 'vendor:css', 'vendor:fonts'
 ));
 
 // Production building start here
