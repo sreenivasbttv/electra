@@ -37,7 +37,9 @@
 
 <!-- ================================ If sample blocks enable ===============================-->
 {% if electra.display_sample_blocks %}
-{{ include('@electra/samples/parallax-block.html', ignore_missing = true) }}
+  {% if is_front %}
+    {{ include('@electra/samples/parallax-block.html', ignore_missing = true) }}
+  {% endif %}
 {% endif %}
 <!-- end sample blocks enable -->
 
