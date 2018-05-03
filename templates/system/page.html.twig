@@ -43,6 +43,13 @@
 {% endif %}
 <!-- end sample blocks enable -->
 
+{% if not is_front %}
+    {% if page.content_header %}
+        {{page.content_header }}
+    {% endif %}      
+{% endif %}
+
+
 <!-- ================================ top Fluid section ===============================-->
  {% if page.content_top_fluid %}
     {{ page.content_top_fluid }}

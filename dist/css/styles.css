@@ -3279,7 +3279,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: transparent;
   border-radius: 0.25rem; }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -6325,6 +6325,23 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
 
+.breadcrumb {
+  justify-content: center;
+  align-items: center; }
+  .breadcrumb .breadcrumb-item + .breadcrumb-item {
+    font-size: 0.625rem; }
+  .breadcrumb .breadcrumb-item a {
+    color: #444;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+.nav-tabs.tab-basic {
+  border-bottom: none; }
+  .nav-tabs.tab-basic .nav-link:focus, .nav-tabs.tab-basic .nav-link:hover {
+    border-color: transparent; }
+
 .parallax-block {
   height: 100%; }
   .parallax-block .parallax-inner {
@@ -6650,6 +6667,28 @@ footer .social-icons {
 
 .top-header #navigation-group .m-nav {
   margin: auto; }
+
+.page-header {
+  background: linear-gradient(to right, rgba(27, 216, 220, 0.2), rgba(253, 0, 58, 0.2));
+  height: 21.875rem;
+  width: 100%;
+  text-align: center;
+  position: relative; }
+  .page-header .container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center; }
+  .page-header .block-local-tasks-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .page-header .block-local-tasks-block .nav-tabs {
+      justify-content: center;
+      align-items: center; }
+      .page-header .block-local-tasks-block .nav-tabs li.active {
+        background-color: #fff; }
 
 .electra-signin .section-left,
 .electra-signin .section-right {

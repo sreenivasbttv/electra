@@ -12,6 +12,7 @@ regions:
   header_left: 'Header Left'
   navigation: 'Main Navigation'
   header_right: 'Header Right'
+  content_header: 'Page Header'
   content_top_fluid: 'Page top Full Width'
   content_top: 'Page top'
   content: 'Content' #required!

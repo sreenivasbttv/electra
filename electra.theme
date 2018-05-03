@@ -85,6 +85,14 @@ function electra_preprocess_page(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function electra_preprocess_menu_local_task(&$variables) {
+  $variables['attributes']['class'][] = 'nav-item';
+  $variables['link']['#options']['attributes']['class'][] = 'nav-link';
+}
+
  /**
  * Provides theme settings for Electra theme. Implements hook_form_FORM_ID_alter()
  */
