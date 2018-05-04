@@ -41,7 +41,6 @@ function electra_preprocess_page(&$variables) {
   $variables['electra'] = [];
   $electra_settings = [
     'display_sample_blocks',
-    'user_page_intro',
     'header_color',
     'header_type',
     'header_type_sticky',
@@ -54,18 +53,31 @@ function electra_preprocess_page(&$variables) {
     'social_twitter',
     'social_youtube',
   ];
+
+  $textarea_settings = [
+    'user_page_intro',
+  ];
+
   // Retrieve General and Header options
   foreach ($electra_settings as $electra_setting) {
-    $value = trim(theme_get_setting($electra_setting));
+    $value = trim(theme_get_setting($electra_setting,'electra'));
     if (!empty($value)) {
       $variables['electra'][$electra_setting] = Xss::filter($value);
     }
   }
   // Retrieve social profiles
   foreach ($social_profiles as $social_profile) {
-    $value = trim(theme_get_setting($social_profile));
+    $value = trim(theme_get_setting($social_profile,'electra'));
     if (!empty($value)) {
       $variables['electra']['social_profiles'][$social_profile] = Xss::filter($value);
+    }
+  }
+
+  // Retrieve textarea and text format related fields
+  foreach ($textarea_settings as $textarea_setting) {
+    $value = check_markup(theme_get_setting($textarea_setting,'electra'), 'full_html');
+    if (!empty($value)) {
+      $variables['electra'][$textarea_setting]= Xss::filter($value);
     }
   }
   
@@ -127,9 +139,8 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   ];
 
   $form['electra_settings']['general_tab']['general_options']['user_page_intro'] = [
-    '#type' => 'text_format',
+    '#type' => 'textarea',
     '#title' => t('User Page Intro'),
-    '#format' => 'full_html',
     '#default_value' => theme_get_setting('user_page_intro', 'electra'),
     '#description' => t('Text will be shown on left side of login, registration, forgot password pages.'),
   ];
