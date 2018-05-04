@@ -95,6 +95,10 @@ function electra_preprocess_page(&$variables) {
       ['@url' => 'http://www.bttvs.com']
     );
   }
+
+  // Default variables
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
 }
 
 /**
