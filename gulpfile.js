@@ -143,7 +143,7 @@ gulp.task('images', function () {
 });
 
 
-gulp.task('app', gulp.series('lint', 'images', 'sass'));
+gulp.task('app', gulp.series('lint', 'images', 'sass','scripts'));
 
 gulp.task('vendor:components:js', function () {
   return gulp.src(paths.vendor.components.js)
@@ -226,7 +226,7 @@ gulp.task('all', gulp.parallel('app', 'vendor'));
 gulp.task('build', gulp.series('clean', 'all'));
 
 // Building for production
-gulp.task('all:prod', gulp.parallel('images:prod', 'vendor', 'styles:prod'));
+gulp.task('all:prod', gulp.parallel('images:prod', 'vendor', 'styles:prod','scripts'));
 gulp.task('build:prod', gulp.series('clean', 'all:prod'));
 
 // The default task.
