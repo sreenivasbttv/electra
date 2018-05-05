@@ -1,5 +1,8 @@
+'use strict';
+
 jQuery(function ($) {
   'use strict';
+
   var $win = $(window);
   var $doc = $(document);
 
@@ -21,6 +24,4 @@ jQuery(function ($) {
       }
     }
   });
-
-
 });

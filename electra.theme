@@ -170,8 +170,8 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#description'   => t('Choose header type. If you choose overlay, then header will be overlaid over the below section/content.'),
     '#default_value' => theme_get_setting('header_type', 'electra'),
     '#options' => array(
-    'standard-light' => t('Standard'),
-    'overlay-light' => t('Overlay'),
+    'standard' => t('Standard'),
+    'overlay' => t('Overlay'),
     ),
   );
 

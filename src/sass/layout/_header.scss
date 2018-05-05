@@ -1,11 +1,34 @@
 .top-header {
   @include media-breakpoint-up(lg) {
-    &.blank-menu {
-      position: fixed;
+    &.header-menu {
       width: 100%;
       background: none;
-      z-index: 999;
-      transition: .3s ease-in;
+      &.standard{
+        position: relative;
+      }
+      &.overlay{
+        position: absolute;
+        z-index: 999;
+      }
+
+      &.header-{
+        &fixed{
+          position: fixed;
+          background: $white;
+        }
+        &resize{
+          #block-electra-branding{
+            img{
+              height: rem(35px);
+            }
+          }
+          .nav-item{
+            .nav-link{
+              padding: rem(2px 8px);
+            }
+          }
+        }
+      }
     }
   }
   #block-electra-branding {
