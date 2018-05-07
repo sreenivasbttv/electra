@@ -42,6 +42,7 @@ function electra_preprocess_page(&$variables) {
   $electra_settings = [
     'display_sample_blocks',
     'header_color',
+    'header_link_style',
     'header_type',
     'header_type_sticky',
     'header_type_sticky_resize',
@@ -159,9 +160,20 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
 
   $form['electra_settings']['header_tab']['header_options']['header_color'] = [
     '#type' => 'color',
-    '#title' => t('Header Color'),
+    '#title' => t('Header Background Color'),
     '#default_value' => theme_get_setting('header_color', 'electra'),
-    '#description' => t('Choose color that applies to header as background color.'),
+    '#description' => t('Choose color that applies to header as background color. If choose header type Overlay, then background color will apply only when sticky header'),
+  ];
+
+  $form['electra_settings']['header_tab']['header_options']['header_link_style'] = [
+    '#type' => 'select',
+    '#title' => t('Header link Style'),
+    '#default_value' => theme_get_setting('header_link_style', 'electra'),
+    '#description' => t('Choose header link style'),
+    '#options' => array(
+      'navbar-dark' => t('Light'),
+      'navbar-light' => t('Dark'),
+      ),
   ];
 
   $form['electra_settings']['header_tab']['header_options']['header_type'] = array(
@@ -173,7 +185,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     'standard' => t('Standard'),
     'overlay' => t('Overlay'),
     ),
-  );
+  );  
 
   $form['electra_settings']['header_tab']['header_options']['header_type_sticky'] = [
     '#type' => 'checkbox',

@@ -6667,10 +6667,12 @@ footer .social-icons {
       position: relative; }
     .top-header.header-menu.overlay {
       position: absolute;
-      z-index: 999; }
+      z-index: 1030; }
     .top-header.header-menu.header-fixed {
       position: fixed;
-      background: #fff; }
+      background: #fff;
+      box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.05);
+      z-index: 1030; }
     .top-header.header-menu.header-resize #block-electra-branding img {
       height: 2.1875rem; }
     .top-header.header-menu.header-resize .nav-item .nav-link {

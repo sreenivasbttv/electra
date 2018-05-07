@@ -8,13 +8,15 @@
       }
       &.overlay{
         position: absolute;
-        z-index: 999;
+        z-index: $zindex-fixed;
       }
 
       &.header-{
         &fixed{
           position: fixed;
           background: $white;
+          box-shadow: rem(0 0 15px) rgba(0,0,0,.08), 0 0 4px rgba(0,0,0,.05);
+          z-index: $zindex-fixed;
         }
         &resize{
           #block-electra-branding{

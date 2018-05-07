@@ -5,14 +5,14 @@
     'top-header',
     'navbar',
     'navbar-expand-lg',
-    'navbar-light',
+    electra.header_link_style,
     'header-menu',
     electra.header_type,
   ]
 %}
 
 
-<nav {{ header_attribute.addClass(header_classes) }} {{ header_attribute.setAttribute('data-fixed', electra.header_type_sticky ).setAttribute('data-resize', electra.header_type_sticky_resize ) }} >
+<nav {{ header_attribute.addClass(header_classes) }} {{ header_attribute.setAttribute('data-fixed', electra.header_type_sticky ).setAttribute('data-resize', electra.header_type_sticky_resize ).setAttribute('data-bgcolor', electra.header_color ) }} >
     <div class="container">
         {% if page.header_left %}
             {{ page.header_left }}
