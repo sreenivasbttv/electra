@@ -18,7 +18,6 @@ regions:
   content: 'Content' #required!
   content_bottom: 'Page bottom'
   content_bottom_fluid: 'Page bottom Full Width'
-  sidebar_first: 'Left Sidebar'
-  sidebar_second: 'Right Sidebar'
+  sidebar_right: 'Right Sidebar'
   footer_top: 'Footer Top'
   footer_middle: 'Footer Middle'
