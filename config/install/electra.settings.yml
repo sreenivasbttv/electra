@@ -5,5 +5,6 @@ header_link_style: 'navbar-light'
 header_type: 'standard'
 header_type_sticky: true
 header_type_sticky_resize: true
+display_social_round_icons: true
 copyright_text : '© Copyright @year. All Rights Reserved'
-display_theme_credits : true 
+display_theme_credits : true

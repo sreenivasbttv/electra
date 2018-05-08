@@ -48,6 +48,7 @@ function electra_preprocess_page(&$variables) {
     'header_type_sticky_resize',
     'copyright_text',
     'display_theme_credits',
+    'display_social_round_icons',
   ];
   $social_profiles = [
     'social_facebook',
@@ -94,7 +95,7 @@ function electra_preprocess_page(&$variables) {
   $display_theme_credits = theme_get_setting('display_theme_credits');
   if (!empty($display_theme_credits)) {
     $variables['electra']['theme_credits']['#markup'] = t(
-      '<small>Build with <i class="fas fa-heart"></i> by <a href="@url">Sreenivas Bttv</a></small>',
+      '<small>Build with <i class="fas fa-heart"></i> by <a href="@url" target="_blank">Sreenivas Bttv</a></small>',
       ['@url' => 'http://www.bttvs.com']
     );
   }
@@ -209,6 +210,13 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
     '#group' => 'tabs'
+  ];
+
+  $form['electra_settings']['social_tab']['social_profiles']['display_social_round_icons'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show round icons'),
+    '#default_value' => theme_get_setting('display_social_round_icons', 'electra'),
+    '#description' => t('Enable to show round icons for below updated social profiles'),
   ];
 
   $form['electra_settings']['social_tab']['social_profiles']['social_facebook'] = [

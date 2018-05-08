@@ -1,64 +1,87 @@
 ul.social-icons {
-  padding: 0px;
-  margin-bottom: 0px;
+  padding: rem(0px);
+  margin-bottom: rem(0px);
+
   li {
     display: inline-block;
+
     a {
-      font-size: 18px;
-      padding: 10px;
-      color: #aaa;
+      font-size: rem(18px);
+      padding: rem(10px);
+      color: $gray-500;
       display: block;
-      transition: ease-in .2s;
+      transition: ease-in 0.2s;
+    }
+  }
+
+  &.round-icons {
+    li {
+      a {
+        @include border-radius(50%);
+      }
     }
   }
 }
 
 .brand-bg-icons a {
   color: #fff !important;
-  line-height: 0px;
+  line-height: rem(0px);
+
   &.facebook {
     background: #3b5998;
   }
+
+  &.flickr {
+    background: #ff0084;
+  }
+
+  &.git {
+    background: #333;
+  }
+
   &.google {
     background: #d34836;
   }
-  &.twitter {
-    background: #1dcaff;
-  }
-  &.linkedin {
-    background: #0e76a8;
-  }
-  &.pinterest {
-    background: #C92228;
-  }
-  &.vimeo {
-    background: #162221;
-  }
-  &.skype {
-    background: #12A5F4;
-  }
-  &.youtube {
-    background: #c4302b;
-  }
-  &.flick {
-    background: #ff0084;
-  }
+
   &.instagram {
     background: #8a3ab9;
   }
-  &.git {
-    background: #333;
+
+  &.linkedin {
+    background: #0e76a8;
+  }
+
+  &.pinterest {
+    background: #C92228;
+  }
+
+  &.skype {
+    background: #12A5F4;
+  }
+
+  &.twitter {
+    background: #1dcaff;
+  }
+
+  &.vimeo {
+    background: #162221;
+  }
+
+  &.youtube {
+    background: #c4302b;
   }
 }
 
 ul.social-icons {
   &.icon-sm li a {
-    font-size: 14px;
+    font-size: rem(14px);
   }
+
   &.icon-md li a {
-    font-size: 20px;
+    font-size: rem(20px);
   }
+
   &.icon-lg li a {
-    font-size: 23px;
+    font-size: rem(23px);
   }
 }

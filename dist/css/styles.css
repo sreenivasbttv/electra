@@ -6395,51 +6395,53 @@ a.text-dark:hover, a.text-dark:focus {
     font-weight: 300; }
 
 ul.social-icons {
-  padding: 0px;
-  margin-bottom: 0px; }
+  padding: 0rem;
+  margin-bottom: 0rem; }
   ul.social-icons li {
     display: inline-block; }
     ul.social-icons li a {
-      font-size: 18px;
-      padding: 10px;
-      color: #aaa;
+      font-size: 1.125rem;
+      padding: 0.625rem;
+      color: #adb5bd;
       display: block;
-      transition: ease-in .2s; }
+      transition: ease-in 0.2s; }
+  ul.social-icons.round-icons li a {
+    border-radius: 50%; }
 
 .brand-bg-icons a {
   color: #fff !important;
-  line-height: 0px; }
+  line-height: 0rem; }
   .brand-bg-icons a.facebook {
     background: #3b5998; }
+  .brand-bg-icons a.flickr {
+    background: #ff0084; }
+  .brand-bg-icons a.git {
+    background: #333; }
   .brand-bg-icons a.google {
     background: #d34836; }
-  .brand-bg-icons a.twitter {
-    background: #1dcaff; }
+  .brand-bg-icons a.instagram {
+    background: #8a3ab9; }
   .brand-bg-icons a.linkedin {
     background: #0e76a8; }
   .brand-bg-icons a.pinterest {
     background: #C92228; }
-  .brand-bg-icons a.vimeo {
-    background: #162221; }
   .brand-bg-icons a.skype {
     background: #12A5F4; }
+  .brand-bg-icons a.twitter {
+    background: #1dcaff; }
+  .brand-bg-icons a.vimeo {
+    background: #162221; }
   .brand-bg-icons a.youtube {
     background: #c4302b; }
-  .brand-bg-icons a.flick {
-    background: #ff0084; }
-  .brand-bg-icons a.instagram {
-    background: #8a3ab9; }
-  .brand-bg-icons a.git {
-    background: #333; }
 
 ul.social-icons.icon-sm li a {
-  font-size: 14px; }
+  font-size: 0.875rem; }
 
 ul.social-icons.icon-md li a {
-  font-size: 20px; }
+  font-size: 1.25rem; }
 
 ul.social-icons.icon-lg li a {
-  font-size: 23px; }
+  font-size: 1.4375rem; }
 
 .page-footer {
   border-top: 1px solid #eee; }
@@ -6457,7 +6459,9 @@ ul.social-icons.icon-lg li a {
     .page-footer .footer-middle .menu li {
       padding-right: 1rem;
       padding-left: 0.625rem;
-      border-right: 0.0625rem solid rgba(222, 226, 230, 0.6); } }
+      border-right: 0.0625rem solid rgba(222, 226, 230, 0.6); }
+      .page-footer .footer-middle .menu li:last-child {
+        border-right: none; } }
   .page-footer .footer-middle .menu li a:hover {
     text-decoration: underline; }
   .page-footer .footer-bottom {
