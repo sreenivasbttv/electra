@@ -1,0 +1,48 @@
+<!-- =============================== header ===============================-->
+{% set header_attribute = create_attribute() %}
+{%
+  set header_classes = [
+    'top-header',
+    'navbar',
+    'navbar-expand-lg',
+    electra.header_link_style,
+    'header-menu',
+    electra.header_type,
+  ]
+%}
+
+<nav {{ header_attribute.addClass(header_classes) }} {{ header_attribute.setAttribute('data-fixed', electra.header_type_sticky ).setAttribute('data-resize', electra.header_type_sticky_resize ).setAttribute('data-bgcolor', electra.header_color ) }}>
+  <div class="container">
+    {% if page.header_left %}
+      {{ page.header_left }}
+    {% endif %}
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-brand md-logo"></div>
+    </a>
+    <!-- end of navbar-brand -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-group" aria-controls="navigation-group" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- end of navbar-toggler -->
+    <div class="collapse navbar-collapse" id="navigation-group">
+
+      <div class="navbar-right m-nav">
+        {% if page.navigation %}
+          {{ page.navigation }}
+        {% endif %}
+      </div>
+
+      <div class="navbar-right m-account">
+
+        {% if page.header_right %}
+          {{ page.header_right }}
+        {% endif %}
+
+      </div>
+      <!-- end of navbar-right -->
+    </div>
+    <!-- end of collapse -->
+  </div>
+  <!-- end of container -->
+</nav>
+<!-- end of nav -->

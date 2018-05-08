@@ -46,6 +46,8 @@ function electra_preprocess_page(&$variables) {
     'header_type',
     'header_type_sticky',
     'header_type_sticky_resize',
+    'copyright_text',
+    'display_theme_credits',
   ];
   $social_profiles = [
     'social_facebook',
@@ -81,7 +83,7 @@ function electra_preprocess_page(&$variables) {
       $variables['electra'][$textarea_setting]= Xss::filter($value);
     }
   }
-  
+
   // Process Copyright text
   $copyright_text = theme_get_setting('copyright_text');
   if (!empty($copyright_text)) {
@@ -92,7 +94,7 @@ function electra_preprocess_page(&$variables) {
   $display_theme_credits = theme_get_setting('display_theme_credits');
   if (!empty($display_theme_credits)) {
     $variables['electra']['theme_credits']['#markup'] = t(
-      'Build with love by <a href="@url">Sreenivas Bttv</a>',
+      '<small>Build with <i class="fas fa-heart"></i> by <a href="@url">Sreenivas Bttv</a></small>',
       ['@url' => 'http://www.bttvs.com']
     );
   }
@@ -185,7 +187,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     'standard' => t('Standard'),
     'overlay' => t('Overlay'),
     ),
-  );  
+  );
 
   $form['electra_settings']['header_tab']['header_options']['header_type_sticky'] = [
     '#type' => 'checkbox',
@@ -237,7 +239,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#title' => t('Twitter'),
     '#default_value' => theme_get_setting('social_twitter', 'electra'),
     '#description' => t('Your Twitter username (no @).'),
-  ];  
+  ];
 
   $form['electra_settings']['social_tab']['social_profiles']['social_youtube'] = [
     '#type' => 'textfield',
@@ -256,7 +258,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#group' => 'tabs'
   ];
 
-  
+
   $form['electra_settings']['footer_tab']['footer_options']['copyright_text'] = [
     '#type' => 'textfield',
     '#title' => t('Enter copyright text'),

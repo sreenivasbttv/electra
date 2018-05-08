@@ -20,6 +20,5 @@ regions:
   content_bottom_fluid: 'Page bottom Full Width'
   sidebar_first: 'Left Sidebar'
   sidebar_second: 'Right Sidebar'
-  footer_left: 'Footer Left'
+  footer_top: 'Footer Top'
   footer_middle: 'Footer Middle'
-  footer_right: 'Footer Right'

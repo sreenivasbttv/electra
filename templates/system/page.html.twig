@@ -1,52 +1,4 @@
-<!-- =============================== header ===============================-->
-{% set header_attribute = create_attribute() %}
-{%
-  set header_classes = [
-    'top-header',
-    'navbar',
-    'navbar-expand-lg',
-    electra.header_link_style,
-    'header-menu',
-    electra.header_type,
-  ]
-%}
-
-
-<nav {{ header_attribute.addClass(header_classes) }} {{ header_attribute.setAttribute('data-fixed', electra.header_type_sticky ).setAttribute('data-resize', electra.header_type_sticky_resize ).setAttribute('data-bgcolor', electra.header_color ) }} >
-    <div class="container">
-        {% if page.header_left %}
-            {{ page.header_left }}
-        {% endif %}
-        <a class="navbar-brand" href="index.html">
-            <div class="logo-brand md-logo"></div>
-        </a>
-        <!-- end of navbar-brand -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-group" aria-controls="navigation-group" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- end of navbar-toggler -->
-        <div class="collapse navbar-collapse" id="navigation-group">
-
-            <div class="navbar-right m-nav">
-                {% if page.navigation %}
-                    {{ page.navigation }}
-                {% endif %}
-            </div>
-
-            <div class="navbar-right m-account">
-
-                {% if page.header_right %}
-                    {{ page.header_right }}
-                {% endif %}
-
-            </div>
-            <!-- end of navbar-right -->
-        </div>
-        <!-- end of collapse -->
-    </div>
-    <!-- end of container -->
-</nav>
-<!-- end of nav -->
+{% include '@electra/includes/header.html.twig' %}
 
 <!-- ================================ If sample blocks enable ===============================-->
 {% if electra.display_sample_blocks %}
@@ -59,7 +11,7 @@
 {% if not is_front %}
     {% if page.content_header %}
         {{page.content_header }}
-    {% endif %}      
+    {% endif %}
 {% endif %}
 
 
@@ -75,53 +27,4 @@
     </div>
 </section>
 
-<!-- =============================== footer ===============================-->
-<footer class="saas-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="logo-brand sm-logo">
-                    <h3>Electra</h3>
-                </div>
-                <!-- end of logo-brand -->
-            </div>
-            <!-- end of col-md-6 -->
-            <div class="col-md-6 d-flex">
-                <div class="copy-protector">
-                    <p>&copy; Copyright 2018. All Rights Reserved.</p>
-                </div>
-                <!-- end of copy-protector -->
-            </div>
-            <!-- end of col-md-6 -->
-            <div class="col-md-3 d-flex">
-                <ul class="social-icons black-icon icon-sm">
-                    <li>
-                        <a href="#" class="facebook">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="google">
-                            <i class="fab fa-google-plus-g fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="twitter">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="linkedin">
-                            <i class="fab fa-linkedin-in fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- end of social-icons -->
-            </div>
-            <!-- end of col-md-3 -->
-        </div>
-        <!-- end of row -->
-    </div>
-    <!-- end of container -->
-</footer>
-<!-- end of saas-footer -->
+{% include '@electra/includes/footer.html.twig' %}

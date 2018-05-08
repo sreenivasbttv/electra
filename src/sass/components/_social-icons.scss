@@ -13,246 +13,43 @@ ul.social-icons {
   }
 }
 
-.element-section-wrapper {
-  padding: 40px 0 30px;
-  border-bottom: 1px solid #eee;
-}
-
-.element-section-wrapper-spl {
-  padding: 40px 0 45px;
-}
-
-/*-- 05.19.1 HOVER ICONS ---*/
-
-ul.social-icons {
-  &.hover-icons li a:hover {
-    color: #000;
-  }
-  &.brand-color-icons li a.fbook, &.brand-hover-icons li a.fbook:hover {
-    color: #3b5998;
-  }
-  &.brand-color-icons li a.google, &.brand-hover-icons li a.google:hover {
-    color: #d34836;
-  }
-  &.brand-color-icons li a.twr, &.brand-hover-icons li a.twr:hover {
-    color: #1dcaff;
-  }
-  &.brand-color-icons li a.lin, &.brand-hover-icons li a.lin:hover {
-    color: #0e76a8;
-  }
-  &.brand-color-icons li a.pin, &.brand-hover-icons li a.pin:hover {
-    color: #C92228;
-  }
-  &.brand-color-icons li a.vim, &.brand-hover-icons li a.vim:hover {
-    color: #162221;
-  }
-  &.brand-color-icons li a.sky, &.brand-hover-icons li a.sky:hover {
-    color: #12A5F4;
-  }
-  &.brand-color-icons li a.yt, &.brand-hover-icons li a.yt:hover {
-    color: #c4302b;
-  }
-  &.brand-color-icons li a.andro, &.brand-hover-icons li a.andro:hover {
-    color: #34af23;
-  }
-  &.brand-color-icons li a.flick, &.brand-hover-icons li a.flick:hover {
-    color: #ff0084;
-  }
-  &.brand-color-icons li a.insta, &.brand-hover-icons li a.insta:hover {
-    color: #8a3ab9;
-  }
-  &.brand-color-icons li a.git, &.brand-hover-icons li a.git:hover {
-    color: #333;
-  }
-  &.brand-color-icons li a.sht, &.brand-hover-icons li a.sht:hover {
-    color: #acde5e;
-  }
-  &.simple-border-icons li a {
-    border: 1px solid #ccc;
-    line-height: 0px;
-  }
-  &.round-border-icons li a {
-    border: 1px solid #ccc;
-    line-height: 0px;
-    border-radius: 50px;
-  }
-  &.simple-bg-icons li a {
-    color: #000;
-    border: 1px solid #000;
-    &:hover {
-      background: #000;
-      color: #fff;
-    }
-  }
-  &.black-icon li a {
-    color: #000;
-  }
-}
-
-/*-- 05.19.2 BRAND HOVER ICONS  ---*/
-
-/*-- 05.19.3 SIMPLE BORDER ICONS  ---*/
-
-/*-- 05.19.4 ROUND BORDER ICONS  ---*/
-
-/*-- 05.19.5 SIMPLE BG ICONS  ---*/
-
-/*icon-sm*/
-
-/*-- 05.19.6 Brand bg icons  ---*/
-
 .brand-bg-icons a {
   color: #fff !important;
   line-height: 0px;
-  &.fbook {
+  &.facebook {
     background: #3b5998;
   }
   &.google {
     background: #d34836;
   }
-  &.twr {
+  &.twitter {
     background: #1dcaff;
   }
-  &.lin {
+  &.linkedin {
     background: #0e76a8;
   }
-  &.pin {
+  &.pinterest {
     background: #C92228;
   }
-  &.vim {
+  &.vimeo {
     background: #162221;
   }
-  &.sky {
+  &.skype {
     background: #12A5F4;
   }
-  &.yt {
+  &.youtube {
     background: #c4302b;
-  }
-  &.andro {
-    background: #34af23;
   }
   &.flick {
     background: #ff0084;
   }
-  &.insta {
+  &.instagram {
     background: #8a3ab9;
   }
   &.git {
     background: #333;
   }
-  &.sht {
-    background: #acde5e;
-  }
 }
-
-/*-- 05.19.7 outline Brand bg icons  ---*/
-
-.outline-brand-icons a {
-  line-height: 0px;
-  &.fbook {
-    border: 1px solid #3b5998 !important;
-    &:hover {
-      background: #3b5998 !important;
-      color: #fff !important;
-    }
-  }
-  &.google {
-    border: 1px solid #d34836 !important;
-    &:hover {
-      background: #d34836 !important;
-      color: #fff !important;
-    }
-  }
-  &.twr {
-    border: 1px solid #1dcaff !important;
-    &:hover {
-      background: #1dcaff !important;
-      color: #fff !important;
-    }
-  }
-  &.lin {
-    border: 1px solid #0e76a8 !important;
-    &:hover {
-      background: #0e76a8 !important;
-      color: #fff !important;
-    }
-  }
-  &.pin {
-    border: 1px solid #C92228 !important;
-    &:hover {
-      background: #C92228 !important;
-      color: #fff !important;
-    }
-  }
-  &.vim {
-    border: 1px solid #162221 !important;
-    &:hover {
-      background: #162221 !important;
-      color: #fff !important;
-    }
-  }
-  &.sky {
-    border: 1px solid #12A5F4 !important;
-    &:hover {
-      background: #12A5F4 !important;
-      color: #fff !important;
-    }
-  }
-  &.yt {
-    border: 1px solid #c4302b !important;
-    &:hover {
-      background: #c4302b !important;
-      color: #fff !important;
-    }
-  }
-  &.andro {
-    border: 1px solid #34af23 !important;
-    &:hover {
-      background: #34af23 !important;
-      color: #fff !important;
-    }
-  }
-  &.flick {
-    border: 1px solid #ff0084 !important;
-    &:hover {
-      background: #ff0084 !important;
-      color: #fff !important;
-    }
-  }
-  &.insta {
-    border: 1px solid #8a3ab9 !important;
-    &:hover {
-      background: #8a3ab9 !important;
-      color: #fff !important;
-    }
-  }
-  &.git {
-    border: 1px solid #333 !important;
-    &:hover {
-      background: #333 !important;
-      color: #fff !important;
-    }
-  }
-  &.sht {
-    border: 1px solid #acde5e !important;
-    &:hover {
-      background: #acde5e !important;
-      color: #fff !important;
-    }
-  }
-}
-
-/*-- 05.19.8 with border radius icons  ---*/
-
-.with-radius-icons a {
-  border-radius: 5px;
-}
-
-.brand-bg-icons.round-border-icons a {
-  border: 0px !important;
-}
-
-/*-- 05.19.9 BUTTON SIZE  ---*/
 
 ul.social-icons {
   &.icon-sm li a {
