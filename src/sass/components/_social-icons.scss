@@ -28,47 +28,47 @@ ul.social-icons {
   line-height: rem(0px);
 
   &.facebook {
-    background: #3b5998;
+    background: $facebook;
   }
 
   &.flickr {
-    background: #ff0084;
+    background: $flickr;
   }
 
   &.git {
-    background: #333;
+    background: $git;
   }
 
   &.google {
-    background: #d34836;
+    background: $googleplus;
   }
 
   &.instagram {
-    background: #8a3ab9;
+    background: $instagram;
   }
 
   &.linkedin {
-    background: #0e76a8;
+    background: $linkedin;
   }
 
   &.pinterest {
-    background: #C92228;
+    background: $pinterest;
   }
 
   &.skype {
-    background: #12A5F4;
+    background: $skype;
   }
 
   &.twitter {
-    background: #1dcaff;
+    background: $twitter;
   }
 
   &.vimeo {
-    background: #162221;
+    background: $vimeo;
   }
 
   &.youtube {
-    background: #c4302b;
+    background: $youtube;
   }
 }
 
