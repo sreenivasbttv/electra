@@ -1,6 +1,6 @@
 {% include '@electra/includes/header.html.twig' %}
 
-<!-- ================================ If sample blocks enable ===============================-->
+<!-- If sample blocks enable -->
 {% if electra.display_sample_blocks %}
   {% if is_front %}
     {{ include('@electra/samples/parallax-block.html', ignore_missing = true) }}
@@ -9,22 +9,43 @@
 <!-- end sample blocks enable -->
 
 {% if not is_front %}
-    {% if page.content_header %}
-        {{page.content_header }}
-    {% endif %}
+  {% if page.content_header %}
+    {{page.content_header }}
+  {% endif %}
 {% endif %}
 
-
-<!-- ================================ top Fluid section ===============================-->
- {% if page.content_top_fluid %}
-    {{ page.content_top_fluid }}
+<!-- top Fluid section -->
+{% if page.content_top_fluid %}
+  {{ page.content_top_fluid }}
 {% endif %}
 <!-- end top fluid section -->
 
-<section>
-    <div class="container">
+{%
+        set content_classes = [
+          page.sidebar_right ? 'col-md-9',
+          page.sidebar_right is empty ? 'col-md-12'
+        ]
+%}
+
+<section class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div {{ content_attributes.addClass(content_classes) }}>
         {{ page.content }}
+      </div>
+
+      {% if page.sidebar_right %}
+        <div class="col-md-3">
+          {% block sidebar_right %}
+            <aside role="complementary">
+              {{ page.sidebar_right }}
+            </aside>
+          {% endblock %}
+        </div>
+      {% endif %}
+
     </div>
+  </div>
 </section>
 
 {% include '@electra/includes/footer.html.twig' %}
