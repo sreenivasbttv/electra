@@ -12,9 +12,13 @@
                 <h4>Two variations with Gradient / Image parallax types
                                 </h4>
 
+                {% if logged_in %}
                 <a href="/admin/structure/block/block-content" class="btn btn-outline-light"> Create new Parallax Block </a>
+                {% else %}
+                <a href="/user/login?destination=/admin/structure/block/block-content" class="btn btn-outline-light"> Login & Create new Parallax Block </a>
+                {% endif %}
 
-                <p class="font-weight-light mt-2 text-white"> <small> Note: This is sample block for demo purpose. While site alive disable this from theme settings </small> </p>
+                <p class="font-italic mt-5 text-white"> <small> Note: This is sample block for demo purpose. While site alive disable this from theme settings </small> </p>
 
               </div>
             </div>
