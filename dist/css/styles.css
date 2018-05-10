@@ -7589,6 +7589,32 @@ article {
       .page-header .block-local-tasks-block .nav-tabs li.active {
         background-color: #fff; }
 
+.sidebar .block {
+  padding-bottom: 1.875rem;
+  margin-bottom: 1.875rem;
+  border-bottom: 0.0625rem solid #f1eaea; }
+  .sidebar .block:before {
+    position: absolute;
+    content: " ";
+    height: 0.0625rem;
+    width: 30%;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: #000; }
+  .sidebar .block h2, .sidebar .block .title {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0 0 0.9375rem;
+    padding: 0;
+    text-transform: uppercase; }
+  .sidebar .block ul {
+    list-style: none;
+    padding-left: 0; }
+    .sidebar .block ul li {
+      padding: 0.625rem 0;
+      border-bottom: 1px dashed #f1f0f0; }
+
 .electra-signin .section-left,
 .electra-signin .section-right {
   position: relative;

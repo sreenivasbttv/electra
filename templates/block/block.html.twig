@@ -42,7 +42,7 @@
     'title'
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<section {{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
@@ -53,4 +53,4 @@
       {{ content }}
     </div>
   {% endblock %}
-</div>
+</section>
