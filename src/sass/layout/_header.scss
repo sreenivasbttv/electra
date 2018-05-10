@@ -37,6 +37,10 @@
     img {
       width: auto;
       height: rem(40px);
+      transition: none;
+      &:hover{
+        transform: none;
+      }
     }
   }
   #navigation-group {
