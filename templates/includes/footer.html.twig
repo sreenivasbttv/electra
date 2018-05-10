@@ -12,6 +12,10 @@
 
 <footer class="page-footer bg-light">
 
+  {% if page.footer_top %}
+    {{ page.footer_top }}
+  {% endif %}
+
   {% if page.footer_middle %}
     {{ page.footer_middle }}
   {% endif %}
