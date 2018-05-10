@@ -18,6 +18,7 @@ var path = require('path'),
   changed = require('gulp-changed'), // By default it's only able to detect whether files in the stream changed.
   minify = require('gulp-minify'),
   merge = require('merge-stream'),
+  autoprefixer = require('gulp-autoprefixer'),
   imagemin = require('gulp-imagemin');
 
 
@@ -110,6 +111,10 @@ gulp.task('sass', function () {
       extensions: ['.scss']
     }))
     .pipe(sass())
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+          }))
     .pipe(changed(paths.dirs.build))
     .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
     .pipe(gulp.dest(paths.dirs.build + '/css'));
@@ -197,6 +202,10 @@ gulp.task('styles:prod', function () {
       extensions: ['.scss']
     }))
     .pipe(sass())
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
     .pipe(changed(paths.dirs.build))
     .pipe(gulp.dest(paths.dirs.build + '/css'));;
 
