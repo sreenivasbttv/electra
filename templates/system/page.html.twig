@@ -31,7 +31,21 @@
   <div class="container">
     <div class="row">
       <div {{ content_attributes.addClass(content_classes) }}>
+
+        <!-- page top section -->
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+        <!-- page top section -->
+
         {{ page.content }}
+
+        <!-- page bottom section -->
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
+        <!-- page bottom section -->
+
       </div>
 
       {% if page.sidebar_right %}
@@ -47,5 +61,11 @@
     </div>
   </div>
 </section>
+
+<!-- bottom Fluid section -->
+{% if page.content_bottom_fluid %}
+  {{ page.content_bottom_fluid }}
+{% endif %}
+<!-- bottom top fluid section -->
 
 {% include '@electra/includes/footer.html.twig' %}

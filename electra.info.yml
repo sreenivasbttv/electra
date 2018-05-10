@@ -14,9 +14,9 @@ regions:
   header_right: 'Header Right'
   content_header: 'Page Header'
   content_top_fluid: 'Page top Full Width'
-  content_top: 'Page top'
+  content_top: 'Content top'
   content: 'Content' #required!
-  content_bottom: 'Page bottom'
+  content_bottom: 'Content bottom'
   content_bottom_fluid: 'Page bottom Full Width'
   sidebar_right: 'Right Sidebar'
   footer_top: 'Footer Top'
