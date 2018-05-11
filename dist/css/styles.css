@@ -7349,8 +7349,58 @@ img {
   font-size: 0.8125rem;
   text-transform: uppercase;
   font-weight: 500;
-  -webkit-transition: .3s ease-in;
-  transition: .3s ease-in; }
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in; }
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0; }
+    .navbar .nav-item .nav-link {
+      padding: 1.5625rem 0.625rem; }
+  .dropdown-list {
+    display: block;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    background: #fff;
+    visibility: hidden;
+    /* hides sub-menu */
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    -webkit-transform: translateY(-2em);
+    transform: translateY(-2em);
+    z-index: -1;
+    -webkit-transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.01s;
+    transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.01s;
+    margin-top: 0rem;
+    border: 0;
+    border-radius: 0 0 0.125rem 0.125rem;
+    -webkit-box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.05); }
+    .dropdown-list a {
+      padding: 0.3125rem 0.9375rem;
+      font-size: 0.8125rem;
+      color: #6c757d;
+      font-family: 'Open Sans', sans-serif;
+      display: block;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      text-transform: none;
+      font-weight: 400;
+      opacity: 1;
+      text-transform: capitalize; }
+  .dropdown:hover .dropdown-list {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition-delay: 0s, 0s, 0.3s;
+    transition-delay: 0s, 0s, 0.3s; } }
 
 .parallax-block {
   height: 100%; }
@@ -7536,7 +7586,7 @@ article {
     .top-header.header-menu.header-resize #block-electra-branding img {
       height: 2.1875rem; }
     .top-header.header-menu.header-resize .nav-item .nav-link {
-      padding: 0.125rem 0.5rem; } }
+      padding: 0.9375rem 0.625rem; } }
 
 .top-header #block-electra-branding img {
   width: auto;
