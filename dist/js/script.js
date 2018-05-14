@@ -1,17 +1,13 @@
 'use strict';
 
 (function ($, Drupal, document) {
-  'use strict';
-
   var $win = $(window);
-  var $doc = $(document);
-
   // set header color based on theme settings
   Drupal.behaviors.headerBGCOLOR = {
     attach: function attach(context, settings) {
-      var $el = $(".top-header");
+      var $el = $('.top-header');
       if ($el.hasClass('standard')) {
-        $el.css("background", $el.data("bgcolor"));
+        $el.css('background', $el.data('bgcolor'));
       }
     }
   };
@@ -29,21 +25,21 @@
 
   // set fixed header based on theme setting sticky header
   $win.on('load scroll', function () {
+    var $el = $('.top-header');
     if ($win.width() >= 992) {
       var scroll = $win.scrollTop();
-      var $el = $(".top-header");
-      if (Boolean($el.data("fixed"))) {
+      if ($el.data('fixed')) {
         if (scroll) {
-          $el.addClass("header-fixed");
-          $el.css("background", hexToRgbA($el.data("bgcolor"), 90));
+          $el.addClass('header-fixed');
+          $el.css('background', hexToRgbA($el.data('bgcolor'), 90));
           // if theme setting sticky header resize enable
-          if (Boolean($el.data("resize"))) {
-            $el.addClass("header-resize");
+          if ($el.data('resize')) {
+            $el.addClass('header-resize');
           }
         } else {
-          $el.removeClass("header-fixed header-resize");
+          $el.removeClass('header-fixed header-resize');
           if ($el.hasClass('overlay')) {
-            $el.css("background", '');
+            $el.css('background', '');
           }
         }
       }

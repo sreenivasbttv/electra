@@ -27,7 +27,6 @@ use Drupal\Core\Url;
 /**
  * Implements hook_preprocess_input() to add classes to inputs.
  */
-
  function electra_preprocess_input(&$variables){
     $element = $variables['element'];
     if($element['#type']=='submit'){

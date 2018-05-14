@@ -9519,7 +9519,6 @@ img:hover {
     position: absolute;
     background: #fff;
     visibility: hidden;
-    /* hides sub-menu */
     opacity: 0;
     top: 100%;
     left: 0;
@@ -9529,7 +9528,7 @@ img:hover {
     -webkit-transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.01s;
     transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.01s;
     margin-top: 0rem;
-    border: 0;
+    border: none;
     border-radius: 0 0 0.125rem 0.125rem;
     -webkit-box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.05);
     box-shadow: 0 0.3125rem 0.5rem rgba(0, 0, 0, 0.05);
@@ -9545,7 +9544,6 @@ img:hover {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    text-transform: none;
     font-weight: 400;
     opacity: 1;
     text-transform: capitalize;
@@ -9928,7 +9926,7 @@ article .links li:first-child {
 }
 .electra-signin .section-left .c-box ,
 .electra-signin .section-right .c-box {
-  border: 0;
+  border: none;
   padding: 0;
   width: 25rem;
 }
