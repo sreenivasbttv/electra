@@ -19,6 +19,7 @@ var path = require('path'),
   minify = require('gulp-minify'),
   merge = require('merge-stream'),
   autoprefixer = require('gulp-autoprefixer'),
+  csscomb = require('gulp-csscomb'),
   imagemin = require('gulp-imagemin');
 
 
@@ -116,6 +117,7 @@ gulp.task('sass', function () {
             cascade: false
           }))
     .pipe(changed(paths.dirs.build))
+    .pipe(csscomb())
     .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
     .pipe(gulp.dest(paths.dirs.build + '/css'));
 });
@@ -171,6 +173,7 @@ gulp.task('vendor:js', function () {
 
 gulp.task('vendor:css', function () {
   return gulp.src(paths.vendor.libs.css)
+    .pipe(csscomb())
     .pipe(gulp.dest(paths.dirs.build + '/vendor/css'));
 });
 
@@ -207,6 +210,7 @@ gulp.task('styles:prod', function () {
             cascade: false
         }))
     .pipe(changed(paths.dirs.build))
+    .pipe(csscomb())
     .pipe(gulp.dest(paths.dirs.build + '/css'));;
 
   return merge(cssStream, sassStream)
