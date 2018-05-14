@@ -1,5 +1,4 @@
 @import 'base/base';
-
 // Vendor
 //
 // Styles from 3rd party frameworks
@@ -9,7 +8,6 @@
 // Style guide: base
 @import 'reset';
 @import 'vendor/**/*';
-
 @import 'components/**/*';
 @import 'layout/**/*';
 @import 'pages/**/*';

@@ -31,8 +31,9 @@ INSTALLATION
 
 CONFIGURATION
 -------------
-The theme has additional theme settings related to header, social profile links, footer copy right and user page text.
-After enable theme navigate to Appearance -> Electra settings and change as per site requirement.
+The theme has additional theme settings related to header, social profile links,
+footer copy right and user page text. After enable theme navigate to
+Appearance -> Electra settings and change as per site requirement.
 
 MAINTAINERS
 -----------

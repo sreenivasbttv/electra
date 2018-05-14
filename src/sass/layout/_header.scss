@@ -3,29 +3,33 @@
     &.header-menu {
       width: 100%;
       background: none;
-      &.standard{
+
+      &.standard {
         position: relative;
       }
-      &.overlay{
+
+      &.overlay {
         position: absolute;
         z-index: $zindex-fixed;
       }
 
-      &.header-{
-        &fixed{
+      &.header- {
+        &fixed {
           position: fixed;
           background: $white;
           box-shadow: rem(0 0 15px) rgba(0,0,0,.08), 0 0 4px rgba(0,0,0,.05);
           z-index: $zindex-fixed;
         }
-        &resize{
-          #block-electra-branding{
-            img{
+
+        &resize {
+          #block-electra-branding {
+            img {
               height: rem(35px);
             }
           }
-          .nav-item{
-            .nav-link{
+
+          .nav-item {
+            .nav-link {
               padding: rem(15px 10px);
             }
           }
@@ -33,16 +37,19 @@
       }
     }
   }
+
   #block-electra-branding {
     img {
       width: auto;
       height: rem(40px);
       transition: none;
-      &:hover{
+
+      &:hover {
         transform: none;
       }
     }
   }
+
   #navigation-group {
     .m-nav {
       margin: auto;

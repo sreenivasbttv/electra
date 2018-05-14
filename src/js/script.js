@@ -1,5 +1,6 @@
 (function ($, Drupal, document) {
   'use strict';
+  
   var $win = $(window);
   var $doc = $(document);
 

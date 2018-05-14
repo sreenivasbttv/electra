@@ -9,8 +9,9 @@
 @include media-breakpoint-up(lg) {
   .navbar {
     padding: 0;
-    .nav-item{
-      .nav-link{
+
+    .nav-item {
+      .nav-link {
         padding: rem(25px 10px);
       }
     }

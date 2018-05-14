@@ -1,10 +1,12 @@
 .breadcrumb {
   justify-content: center;
   align-items: center;
+
   .breadcrumb-item {
     +.breadcrumb-item {
       font-size: rem(10px);
     }
+
     a {
       color: #444;
       font-size: rem(11px);
