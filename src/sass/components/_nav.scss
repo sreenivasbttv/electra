@@ -1,8 +1,10 @@
-.nav-tabs{
-  &.tab-basic{
+.nav-tabs {
+  &.tab-basic {
     border-bottom: none;
-    .nav-link{
-      &:focus, &:hover{
+
+    .nav-link {
+      &:focus,
+      &:hover {
         border-color: transparent;
       }
     }

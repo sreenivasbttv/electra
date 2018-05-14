@@ -1,40 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i');
-
-// custom font families
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i'); // custom font families
 $font-family-sans-serif: 'Quicksand', sans-serif;
 $font-family-open-sans: 'Open Sans', sans-serif;
 $font-family-merriweather: 'merriweather-regular', serif;
-
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
   src: url("../vendor/fonts/fa-brands-400.eot");
-  src: url("../vendor/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fonts/fa-brands-400.woff2") format("woff2"), url("../vendor/fonts/fa-brands-400.woff") format("woff"), url("../vendor/fonts/fa-brands-400.ttf") format("truetype"), url("../vendor/fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../vendor/fonts/fa-brands-400.eot?#iefix") format('embedded-opentype'), url("../vendor/fonts/fa-brands-400.woff2") format('woff2'), url("../vendor/fonts/fa-brands-400.woff") format('woff'), url("../vendor/fonts/fa-brands-400.ttf") format('truetype'), url("../vendor/fonts/fa-brands-400.svg#fontawesome") format('svg');
+}
 
 .fab {
-  font-family: 'Font Awesome 5 Brands'; }
+  font-family: 'Font Awesome 5 Brands';
+}
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../vendor/fonts/fa-regular-400.eot");
+  src: url("../vendor/fonts/fa-regular-400.eot?#iefix") format('embedded-opentype'), url("../vendor/fonts/fa-regular-400.woff2") format('woff2'), url("../vendor/fonts/fa-regular-400.woff") format('woff'), url("../vendor/fonts/fa-regular-400.ttf") format('truetype'), url("../vendor/fonts/fa-regular-400.svg#fontawesome") format('svg');
+}
 
-  @font-face {
-    font-family: 'Font Awesome 5 Free';
-    font-style: normal;
-    font-weight: 400;
-    src: url("../vendor/fonts/fa-regular-400.eot");
-    src: url("../vendor/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fonts/fa-regular-400.woff2") format("woff2"), url("../vendor/fonts/fa-regular-400.woff") format("woff"), url("../vendor/fonts/fa-regular-400.ttf") format("truetype"), url("../vendor/fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../vendor/fonts/fa-solid-900.eot");
+  src: url("../vendor/fonts/fa-solid-900.eot?#iefix") format('embedded-opentype'), url("../vendor/fonts/fa-solid-900.woff2") format('woff2'), url("../vendor/fonts/fa-solid-900.woff") format('woff'), url("../vendor/fonts/fa-solid-900.ttf") format('truetype'), url("../vendor/fonts/fa-solid-900.svg#fontawesome") format('svg');
+}
 
-  .far {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 400; }
-
-    @font-face {
-      font-family: 'Font Awesome 5 Free';
-      font-style: normal;
-      font-weight: 900;
-      src: url("../vendor/fonts/fa-solid-900.eot");
-      src: url("../vendor/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../vendor/fonts/fa-solid-900.woff2") format("woff2"), url("../vendor/fonts/fa-solid-900.woff") format("woff"), url("../vendor/fonts/fa-solid-900.ttf") format("truetype"), url("../vendor/fonts/fa-solid-900.svg#fontawesome") format("svg"); }
-
-    .fa,
-    .fas {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900; }
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}

@@ -9,4 +9,5 @@ global-styling:
     dist/js/script.js: {}
   dependencies:
     - core/jquery
-    - core/drupal  
+    - core/drupal
+      

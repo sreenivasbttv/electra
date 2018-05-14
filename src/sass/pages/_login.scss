@@ -10,19 +10,22 @@
 
 .electra-signin {
   background-color: $gray-100;
+
   .section-left,
   .section-right {
-    @extend %section-signin;  
+    @extend %section-signin;
     @include media-breakpoint-up(md) {
       width: rem(50%);
     }
+
     .c-box {
       border: 0;
       padding: 0;
       width: rem(400px);
     }
   }
-  .section-right{
+
+  .section-right {
     background-color: $white;
   }
 }

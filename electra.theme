@@ -1,19 +1,31 @@
 <?php
 
 /**
+ * @file
+ * The primary PHP file for the Drupal Electra base theme.
+ *
+ * This file should only contain light helper functions and point to stubs in
+ * other files containing more complex functions.
+ *
+ * All [pre]process functions, theme functions and template files lives inside
+ * the `./templates` directory. This is a highly automated and complex system
+ * designed to only load the necessary files when a given theme hook is invoked.
+ */
+
+/**
  * electra theme settings and preprocess functions.
  */
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
-Use Drupal\Core\Link;
-Use Drupal\Component\Utility\Html;
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Xss;
 use Drupal\block\Entity\Block;
 use Drupal\Core\Url;
 
 /**
- * Implements hook_preprocess_input() to add classes to inputs
+ * Implements hook_preprocess_input() to add classes to inputs.
  */
 
  function electra_preprocess_input(&$variables){
@@ -62,14 +74,14 @@ function electra_preprocess_page(&$variables) {
     'user_page_intro',
   ];
 
-  // Retrieve General and Header options
+  // Retrieve General and Header options.
   foreach ($electra_settings as $electra_setting) {
     $value = trim(theme_get_setting($electra_setting,'electra'));
     if (!empty($value)) {
       $variables['electra'][$electra_setting] = Xss::filter($value);
     }
   }
-  // Retrieve social profiles
+  // Retrieve social profiles.
   foreach ($social_profiles as $social_profile) {
     $value = trim(theme_get_setting($social_profile,'electra'));
     if (!empty($value)) {
@@ -77,7 +89,7 @@ function electra_preprocess_page(&$variables) {
     }
   }
 
-  // Retrieve textarea and text format related fields
+  // Retrieve textarea and text format related fields.
   foreach ($textarea_settings as $textarea_setting) {
     $value = check_markup(theme_get_setting($textarea_setting,'electra'), 'full_html');
     if (!empty($value)) {
@@ -85,7 +97,7 @@ function electra_preprocess_page(&$variables) {
     }
   }
 
-  // Process Copyright text
+  // Process Copyright text.
   $copyright_text = theme_get_setting('copyright_text');
   if (!empty($copyright_text)) {
     $copyright_text = str_replace('@year', date('Y'), theme_get_setting('copyright_text'));
@@ -100,7 +112,7 @@ function electra_preprocess_page(&$variables) {
     );
   }
 
-  // Default variables
+  // Default variables.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
 }
