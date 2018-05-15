@@ -13,8 +13,8 @@
  */
 
 /**
-  * Electra theme settings and preprocess functions.
-  */
+ * Electra theme settings and preprocess functions.
+ */
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
@@ -25,24 +25,24 @@ use Drupal\block\Entity\Block;
 use Drupal\Core\Url;
 
 /**
- * Implements hook_preprocess_input() to add classes to inputs.
+ * Implements hook_preprocess_input() for form submit button.
  */
 function electra_preprocess_input(&$variables) {
   $element = $variables['element'];
   if ($element['#type'] == 'submit') {
     $variables['attributes']['class'][] = 'btn btn-primary btn-sm';
   }
-  elseif ($element['#type'] == 'checkbox' || $element['#type'] == 'radio' ){
+  elseif ($element['#type'] == 'checkbox' || $element['#type'] == 'radio') {
     $variables['attributes']['class'][] = 'form-check-input';
   }
   else {
-    $variables['attributes']['class'][] = 'form-control form-control-'.$element['#type'];
+    $variables['attributes']['class'][] = 'form-control form-control-' . $element['#type'];
   }
 }
 
 /**
-  * Implements hook_suggestions_block_alter() for block name suggestions.
-  */
+ * Implements hook_suggestions_block_alter() for block name suggestions.
+ */
 function electra_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
@@ -50,8 +50,8 @@ function electra_theme_suggestions_block_alter(array &$suggestions, array $varia
 }
 
 /**
-  * Implements hook_preprocess_HOOK() for page templates.
-  */
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
 function electra_preprocess_page(&$variables) {
   $variables['electra'] = [];
   $electra_settings = [
@@ -129,8 +129,8 @@ function electra_preprocess_menu_local_task(&$variables) {
 }
 
 /**
-  * Theme settings for Electra theme. Implements hook_form_FORM_ID_alter()
-  */
+ * Theme settings for Electra theme. Implements hook_form_FORM_ID_alter()
+ */
 function electra_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
   // Footer copyrights settings.
@@ -188,22 +188,22 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#title' => t('Header link Style'),
     '#default_value' => theme_get_setting('header_link_style', 'electra'),
     '#description' => t('Choose header link style'),
-    '#options' => array(
+    '#options' => [
       'navbar-dark' => t('Light'),
       'navbar-light' => t('Dark'),
-    ),
+    ],
   ];
 
-  $form['electra_settings']['header_tab']['header_options']['header_type'] = array(
+  $form['electra_settings']['header_tab']['header_options']['header_type'] = [
     '#type' => 'select',
     '#title' => t('Header Type'),
     '#description'   => t('Choose header type. If you choose overlay, then header will be overlaid over the below section/content.'),
     '#default_value' => theme_get_setting('header_type', 'electra'),
-    '#options' => array(
+    '#options' => [
       'standard' => t('Standard'),
       'overlay' => t('Overlay'),
-    ),
-  );
+    ],
+  ];
 
   $form['electra_settings']['header_tab']['header_options']['header_type_sticky'] = [
     '#type' => 'checkbox',
