@@ -1,8 +1,8 @@
-(function ($, Drupal, document) {
+(function ($, Drupal) {
   const $win = $(window);
   // set header color based on theme settings
   Drupal.behaviors.headerBGCOLOR = {
-    attach: function (context, settings) {
+    attach: function (context, settings) { // eslint-disable-line no-unused-vars, object-shorthand
       const $el = $('.top-header');
       if ($el.hasClass('standard')) {
         $el.css('background', $el.data('bgcolor'));
@@ -17,7 +17,7 @@
     const g = parseInt(hex.substring(2, 4), 16);
     const b = parseInt(hex.substring(4, 6), 16);
 
-    const result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+    const result = 'rgba(' + r + ',' + g + ',' + b + ',' + (opacity / 100) + ')';
     return result;
   }
 
@@ -44,4 +44,4 @@
       }
     }
   });
-})(jQuery, Drupal, document);
+}(jQuery, Drupal, document));

@@ -3,9 +3,9 @@ global-styling:
   css:
     theme:
       dist/css/styles.css: {}
-      dist/vendor/css/fontawesome.css: {}
+      dist/vendors/css/fontawesome.css: {}
   js:
-    dist/vendor/js/bootstrap.bundle.js: {}
+    dist/vendors/js/bootstrap.bundle.js: {}
     dist/js/script.js: {}
   dependencies:
     - core/jquery

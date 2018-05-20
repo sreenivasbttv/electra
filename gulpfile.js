@@ -33,12 +33,12 @@ var paths = {
   js: 'src/js/script.js',
   vendor: {
     components: {
-      all: 'src/**/vendor/**/*.*',
-      js: 'src/**/vendor/**/*.js',
+      all: 'src/**/vendors/**/*.*',
+      js: 'src/**/vendors/**/*.js',
       nonJs: [
-        'src/**/vendor/**/*',
-        '!src/**/vendor/**/*.js',
-        '!src/**/vendor/**/*.scss'
+        'src/**/vendors/**/*',
+        '!src/**/vendors/**/*.js',
+        '!src/**/vendors/**/*.scss'
       ]
     },
     libs: {
@@ -58,7 +58,7 @@ var paths = {
     files: [
       'src/**/*.js',
       '!src/**/*.min.js',
-      '!src/**/vendor/**/*.js',
+      '!src/**/vendors/**/*.js',
       '!node_modules/**'
     ]
   }
@@ -111,7 +111,9 @@ gulp.task('sass', function () {
       // Configure it to use SCSS files
       extensions: ['.scss']
     }))
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }))
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -126,9 +128,6 @@ gulp.task('sass', function () {
 gulp.task('scripts:build', function () {
   return gulp.src(paths.js)
     .pipe(babel())
-    .pipe(gulp.dest(paths.dirs.build + '/js'))
-    .pipe(rename('all.min.js'))
-    .pipe(uglify())
     .pipe(gulp.dest(paths.dirs.build + '/js'));
 });
 
@@ -136,7 +135,7 @@ gulp.task('scripts:build', function () {
 gulp.task('scripts:move', function () {
   return gulp.src(paths.vendor.components.js)
     .pipe(uglify())
-    .pipe(gulp.dest(paths.dirs.build + '/vendor'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors'));
 });
 
 gulp.task('scripts', gulp.parallel('scripts:build', 'scripts:move'));
@@ -154,12 +153,12 @@ gulp.task('app', gulp.series('lint', 'images', 'sass','scripts'));
 
 gulp.task('vendor:components:js', function () {
   return gulp.src(paths.vendor.components.js)
-    .pipe(gulp.dest(paths.dirs.build + '/vendor'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors'));
 });
 
 gulp.task('vendor:components:other', function () {
   return gulp.src(paths.vendor.components.nonJs)
-    .pipe(gulp.dest(paths.dirs.build + '/vendor'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors'));
 });
 
 gulp.task('vendor:components', gulp.parallel(
@@ -168,18 +167,18 @@ gulp.task('vendor:components', gulp.parallel(
 
 gulp.task('vendor:js', function () {
   return gulp.src(paths.vendor.libs.js)
-    .pipe(gulp.dest(paths.dirs.build + '/vendor/js'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors/js'));
 });
 
 gulp.task('vendor:css', function () {
   return gulp.src(paths.vendor.libs.css)
     .pipe(csscomb())
-    .pipe(gulp.dest(paths.dirs.build + '/vendor/css'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors/css'));
 });
 
 gulp.task('vendor:fonts', function () {
   return gulp.src(paths.vendor.libs.fonts)
-    .pipe(gulp.dest(paths.dirs.build + '/vendor/fonts'));
+    .pipe(gulp.dest(paths.dirs.build + '/vendors/fonts'));
 });
 
 gulp.task('vendor', gulp.parallel(

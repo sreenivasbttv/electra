@@ -2,9 +2,7 @@
   "extends": "eslint-config-airbnb",
   "root": true,
   "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+    "browser": true
   },
   "globals": {
     "Drupal": true,
@@ -36,6 +34,9 @@
       "requireReturn": false
     }],
     "brace-style": ["error", "stroustrup"],
-    "no-unused-vars": [1]
+    "no-unused-vars": [1],
+    "func-names": "off",
+    "prefer-template": "off",
+    "prefer-arrow-callback": "off"
   }
 }

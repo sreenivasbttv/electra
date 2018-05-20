@@ -1,10 +1,11 @@
 'use strict';
 
-(function ($, Drupal, document) {
+(function ($, Drupal) {
   var $win = $(window);
   // set header color based on theme settings
   Drupal.behaviors.headerBGCOLOR = {
     attach: function attach(context, settings) {
+      // eslint-disable-line no-unused-vars, object-shorthand
       var $el = $('.top-header');
       if ($el.hasClass('standard')) {
         $el.css('background', $el.data('bgcolor'));

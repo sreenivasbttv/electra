@@ -14,7 +14,7 @@ rules:
     - convention: none
   brace-style:
     - 1
-    - allow-single-line: true
+    - allow-single-line: false
   class-name-format:
     - 0
     - convention: hyphenatedbem
@@ -39,7 +39,7 @@ rules:
       convention: hyphenatedlowercase
   hex-length:
     - 1
-    - style: long
+    - style: short
   hex-notation:
     - 1
     - style: lowercase
@@ -69,7 +69,7 @@ rules:
   no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
+  no-ids: 0
   no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors: 1
