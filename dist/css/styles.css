@@ -9713,9 +9713,7 @@ article .links {
 }
 article .links li {
   list-style: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   padding-left: 1rem;
 }
 article .links li:first-child {
