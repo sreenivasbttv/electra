@@ -7,7 +7,7 @@
     attach: function attach(context, settings) {
       // eslint-disable-line no-unused-vars, object-shorthand
       var $el = $('.top-header');
-      if ($el.hasClass('standard')) {
+      if ($el.hasClass('standard') || $el.hasClass('overlay') && $win.width() < 992) {
         $el.css('background', $el.data('bgcolor'));
       }
     }
@@ -44,6 +44,18 @@
           }
         }
       }
+    }
+  });
+
+  // Show submenu while click on multi dropdown links
+  $('.dropdown-menu a.dropdown-item').on('click', function () {
+    // If submenu available preventing href path navigation
+    var $subMenu = $(this).next('.dropdown-menu');
+    var $parentli = $(this).parent('li');
+    if ($subMenu.length > 0) {
+      $parentli.toggleClass('show');
+      $subMenu.toggleClass('show');
+      return false;
     }
   });
 })(jQuery, Drupal, document);

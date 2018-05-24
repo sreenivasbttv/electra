@@ -1,11 +1,64 @@
 .navbar-nav {
+  width: 100%;
+
+  .dropdown-menu {
+    border: none;
+    padding-left: rem(10px);
+
+    @include media-breakpoint-down(md) {
+      box-shadow: none;
+      padding-right: 0;
+      padding-left: $nav-link-padding-y;
+
+      a {
+        padding: $nav-link-padding-y;
+      }
+    }
+  }
+
   .nav-link {
     font-size: rem(13px);
     text-transform: uppercase;
     font-weight: 500;
     transition: 0.3s ease-in;
+
+    @include media-breakpoint-down(md) {
+      padding: $nav-link-padding-y $nav-link-padding-x;
+    }
   }
 }
+
+.dropdown-submenu {
+  position: relative;
+
+  > a {
+    @include caret;
+    @include caret-submenu;
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    float: right;
+    margin-top: rem(6px);
+  }
+}
+
+.dropdown-list {
+  a {
+    padding: rem(4px 0);
+    font-size: rem(13px);
+  }
+}
+
+.dropdown {
+  &.show {
+    > a {
+      @include caret(up);
+    }
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .navbar {
     padding: 0;
@@ -15,13 +68,16 @@
         padding: rem(25px 10px);
       }
     }
+
+    .dropdown-menu {
+      padding-left: rem(0px);
+    }
   }
 
   .dropdown-list {
     display: block;
     flex-wrap: wrap;
     position: absolute;
-    background: $white;
     visibility: hidden;
     // hides sub-menu
     opacity: 0;
@@ -32,8 +88,6 @@
     transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s, z-index 0s linear 0.01s;
     margin-top: rem(0px);
     border: none;
-    border-radius: rem(0 0 2px 2px);
-    box-shadow: rem(0 5px 8px) rgba(0,0,0,0.05);
 
     a {
       padding: rem(5px 15px);
@@ -50,11 +104,55 @@
     }
   }
 
-  .dropdown:hover .dropdown-list {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-    transform: translateY(0%);
-    transition-delay: 0s, 0s, 0.3s;
+  .dropdown {
+
+    &:hover {
+
+      > a {
+        @include caret(up);
+      }
+
+      > .dropdown-list {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s, 0.3s;
+      }
+    }
+  }
+
+  .dropdown-submenu {
+    position: relative;
+
+    > a {
+      @include caret(right);
+    }
+
+    .dropdown-list {
+      top: 0px;
+      left: 100%;
+    }
+
+    &:hover {
+
+      > a {
+        @include caret(right);
+      }
+
+      > .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    &:after {
+      float: none;
+      margin-top: rem(0px);
+    }
   }
 }

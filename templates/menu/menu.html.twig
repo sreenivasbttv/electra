@@ -24,7 +24,7 @@
                 {%
         set item_classes = [
           menu_level == 0 ? 'nav-item',
-          item.is_expanded and item.below ? '',
+          item.is_expanded and menu_level > 0 and item.below ? 'dropdown dropdown-submenu',
           item.is_expanded and menu_level == 0 and item.below ? 'dropdown',
           item.in_active_trail ? 'active',
         ]
