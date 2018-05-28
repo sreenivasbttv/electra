@@ -9550,6 +9550,10 @@ a.text-dark:focus {
   letter-spacing: 1px;
 }
 
+.filter-wrapper {
+  border-top: 1px solid #ccc;
+}
+
 img {
   -webkit-box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
   box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
