@@ -10036,6 +10036,10 @@ article .links li:first-child {
   padding: 3.75rem 0;
 }
 
+.comment-form .form-actions {
+  margin: 1rem 0;
+}
+
 .page-header {
   background: -webkit-gradient(linear, left top, right top, from(rgba(27, 216, 220, 0.2)), to(rgba(253, 0, 58, 0.2)));
   background: linear-gradient(to right, rgba(27, 216, 220, 0.2), rgba(253, 0, 58, 0.2));
