@@ -9559,6 +9559,11 @@ textarea {
   border: 1px solid #ced4da;
 }
 
+.editor-image-dialog .form-check-input {
+  margin-left: 0;
+  position: inherit;
+}
+
 img {
   -webkit-box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
   box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;

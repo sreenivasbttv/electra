@@ -2,3 +2,10 @@ textarea {
   width: 100%;
   border: 1px solid $gray-400;
 }
+
+.editor-image-dialog {
+  .form-check-input {
+    margin-left: 0;
+    position: inherit;
+  }
+}
