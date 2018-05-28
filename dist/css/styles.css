@@ -9554,6 +9554,11 @@ a.text-dark:focus {
   border-top: 1px solid #ccc;
 }
 
+textarea {
+  width: 100%;
+  border: 1px solid #ced4da;
+}
+
 img {
   -webkit-box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
   box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
