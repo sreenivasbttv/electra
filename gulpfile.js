@@ -105,7 +105,7 @@ gulp.task('lint', gulp.parallel('lint:js', 'lint:sass'));
 // building sass files
 gulp.task('sass', function () {
   return gulp.src(paths.sass)
-    .pipe(using({ prefix: 'After changed:' }))
+    .pipe(using({prefix: 'After changed:'}))
     .pipe(sourcemaps.init())
     .pipe(globbing({
       // Configure it to use SCSS files
@@ -115,12 +115,12 @@ gulp.task('sass', function () {
       outputStyle: 'expanded'
     }))
     .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-          }))
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(changed(paths.dirs.build))
     .pipe(csscomb())
-    .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
+    .pipe(sourcemaps.write('.', {sourceRoot: '/'}))
     .pipe(gulp.dest(paths.dirs.build + '/css'));
 });
 
@@ -131,7 +131,7 @@ gulp.task('scripts:build', function () {
     .pipe(gulp.dest(paths.dirs.build + '/js'));
 });
 
-//Moving source libraries to build
+// Moving source libraries to build
 gulp.task('scripts:move', function () {
   return gulp.src(paths.vendor.components.js)
     .pipe(uglify())
@@ -143,13 +143,13 @@ gulp.task('scripts', gulp.parallel('scripts:build', 'scripts:move'));
 // Optimize images
 gulp.task('images', function () {
   return gulp.src(paths.images)
-    .pipe(debug({ title: 'optimized images:' }))
+    .pipe(debug({title: 'optimized images:'}))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.dirs.build + '/img'));
 });
 
 
-gulp.task('app', gulp.series('lint', 'images', 'sass','scripts'));
+gulp.task('app', gulp.series('lint', 'images', 'sass', 'scripts'));
 
 gulp.task('vendor:components:js', function () {
   return gulp.src(paths.vendor.components.js)
@@ -205,12 +205,12 @@ gulp.task('styles:prod', function () {
     }))
     .pipe(sass())
     .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(changed(paths.dirs.build))
     .pipe(csscomb())
-    .pipe(gulp.dest(paths.dirs.build + '/css'));;
+    .pipe(gulp.dest(paths.dirs.build + '/css'));
 
   return merge(cssStream, sassStream)
     .pipe(concat('all.min.css'))
@@ -220,7 +220,7 @@ gulp.task('styles:prod', function () {
 
 // watching sass files
 gulp.task('watch:styles', function () {
-  gulp.watch(paths.dirs.source+'/**/*.scss', gulp.series('sass'));
+  gulp.watch(paths.dirs.source + '/**/*.scss', gulp.series('sass'));
 });
 // watching scripts and other files
 gulp.task('watch:code', function () {
@@ -238,7 +238,7 @@ gulp.task('all', gulp.parallel('app', 'vendor'));
 gulp.task('build', gulp.series('clean', 'all'));
 
 // Building for production
-gulp.task('all:prod', gulp.parallel('images:prod', 'vendor', 'styles:prod','scripts'));
+gulp.task('all:prod', gulp.parallel('images:prod', 'vendor', 'styles:prod', 'scripts'));
 gulp.task('build:prod', gulp.series('clean', 'all:prod'));
 
 // The default task.
