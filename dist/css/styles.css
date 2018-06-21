@@ -9559,7 +9559,7 @@ textarea {
   border: 1px solid #ced4da;
 }
 
-.editor-image-dialog .form-check-input {
+form .form-check-input {
   margin-left: 0;
   position: inherit;
 }
