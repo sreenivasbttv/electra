@@ -10101,6 +10101,7 @@ article .links li:first-child {
   padding-bottom: 1.875rem;
   margin-bottom: 1.875rem;
   border-bottom: 0.0625rem solid #f1eaea;
+  position: relative;
 }
 .sidebar .block:before {
   position: absolute;
