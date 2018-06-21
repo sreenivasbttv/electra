@@ -9,3 +9,25 @@ form {
     position: inherit;
   }
 }
+
+fieldset,
+details {
+  border: 1px solid $gray-400;
+  padding: rem(20px);
+  margin: rem(8px 0);
+  border-radius: rem(4px);
+
+  legend {
+    border: none;
+    width: auto;
+    color: $black;
+    font-size: rem(14px);
+    padding: rem(0 10px);
+  }
+
+  .fieldgroup {
+    legend {
+      padding: 0;
+    }
+  }
+}

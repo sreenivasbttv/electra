@@ -9564,6 +9564,26 @@ form .form-check-input {
   position: inherit;
 }
 
+fieldset,
+details {
+  border: 1px solid #ced4da;
+  padding: 1.25rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+fieldset legend,
+details legend {
+  border: none;
+  width: auto;
+  color: #000;
+  font-size: 0.875rem;
+  padding: 0 0.625rem;
+}
+fieldset .fieldgroup legend,
+details .fieldgroup legend {
+  padding: 0;
+}
+
 img {
   -webkit-box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
   box-shadow: 0 1.25rem 2.1875rem -1.25rem #000;
