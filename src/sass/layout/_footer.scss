@@ -62,4 +62,16 @@
       color: $pink;
     }
   }
+  .copyright,
+  .social-icons {
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .copyright {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 10px;
+    }
+  }
 }
