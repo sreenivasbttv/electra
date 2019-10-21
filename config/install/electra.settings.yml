@@ -8,3 +8,4 @@ header_type_sticky_resize: true
 display_social_round_icons: true
 copyright_text : '© Copyright @year. All Rights Reserved'
 display_theme_credits : true
+header_position : 'header-top'

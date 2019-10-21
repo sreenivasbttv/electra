@@ -59,6 +59,7 @@ function electra_preprocess_page(&$variables) {
     'copyright_text',
     'display_theme_credits',
     'display_social_round_icons',
+    'header_position',
   ];
   $social_profiles = [
     'social_facebook',
@@ -169,6 +170,17 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
     '#group' => 'tabs',
+  ];
+
+  $form['electra_settings']['header_tab']['header_options']['header_position'] = [
+   '#type' => 'select',
+    '#title' => t('Header Position'),
+    '#default_value' => theme_get_setting('header_position', 'electra'),
+    '#description' => t('Choose header position'),
+    '#options' => [
+      'header-top' => t('Top'),
+      'header-left' => t('Left'),
+    ],
   ];
 
   $form['electra_settings']['header_tab']['header_options']['header_color'] = [

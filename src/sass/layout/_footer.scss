@@ -62,6 +62,7 @@
       color: $pink;
     }
   }
+
   .copyright,
   .social-icons {
     @include media-breakpoint-down(sm) {
@@ -69,6 +70,7 @@
       text-align: center;
     }
   }
+
   .copyright {
     @include media-breakpoint-down(sm) {
       padding-bottom: 10px;

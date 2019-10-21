@@ -4,7 +4,7 @@
   Drupal.behaviors.headerBGCOLOR = {
     attach: function (context, settings) { // eslint-disable-line no-unused-vars, object-shorthand
       const $el = $('.top-header');
-      if ($el.hasClass('standard') || ($el.hasClass('overlay') && $win.width() < 992)) {
+      if ($el.hasClass('standard') || $('nav').hasClass('header-left') || ($el.hasClass('overlay') && $win.width() < 992)) {
         $el.css('background', $el.data('bgcolor'));
       }
     },
@@ -22,28 +22,30 @@
   }
 
   // set fixed header based on theme setting sticky header
-  $win.on('load scroll', function () {
-    const $el = $('.top-header');
-    if ($win.width() >= 992) {
-      const scroll = $win.scrollTop();
-      if ($el.data('fixed')) {
-        if (scroll) {
-          $el.addClass('header-fixed');
-          $el.css('background', hexToRgbA($el.data('bgcolor'), 90));
-          // if theme setting sticky header resize enable
-          if ($el.data('resize')) {
-            $el.addClass('header-resize');
+  if (!$('nav').hasClass('header-left')) {
+    $win.on('load scroll', function () {
+      const $el = $('.top-header');
+      if ($win.width() >= 992) {
+        const scroll = $win.scrollTop();
+        if ($el.data('fixed')) {
+          if (scroll) {
+            $el.addClass('header-fixed');
+            $el.css('background', hexToRgbA($el.data('bgcolor'), 90));
+            // if theme setting sticky header resize enable
+            if ($el.data('resize')) {
+              $el.addClass('header-resize');
+            }
           }
-        }
-        else {
-          $el.removeClass('header-fixed header-resize');
-          if ($el.hasClass('overlay')) {
-            $el.css('background', '');
+          else {
+            $el.removeClass('header-fixed header-resize');
+            if ($el.hasClass('overlay')) {
+              $el.css('background', '');
+            }
           }
         }
       }
-    }
-  });
+    });
+  }
 
   // Show submenu while click on multi dropdown links
   $('.dropdown-menu a.dropdown-item').on('click', function () {

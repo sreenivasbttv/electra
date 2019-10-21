@@ -1,71 +1,87 @@
-{% include '@electra/includes/header.html.twig' %}
+{% if electra.header_position == 'header-left' %}
+  <div class="main-content-wrapper">
+{% endif %}
+  {% include '@electra/includes/header.html.twig' %}
 
-<!-- If sample blocks enable -->
-{% if electra.display_sample_blocks %}
-  {% if is_front %}
-    {{ include('@electra/samples/parallax-block.html.twig', ignore_missing = true) }}
+  <!-- If header position is left then add wrapper div -->
+  {% if electra.header_position == 'header-left' %}
+    <div class="content-right">
   {% endif %}
-{% endif %}
-<!-- end sample blocks enable -->
 
-{% if not is_front %}
-  {% if page.content_header %}
-    {{page.content_header }}
-  {% endif %}
-{% endif %}
-
-<!-- top Fluid section -->
-{% if page.content_top_fluid %}
-  {{ page.content_top_fluid }}
-{% endif %}
-<!-- end top fluid section -->
-
-{%
-        set content_classes = [
-          page.sidebar_right ? 'col-md-9',
-          page.sidebar_right is empty ? 'col-md-12'
-        ]
-%}
-
-<section class="content-wrapper">
-  <div class="container">
-    <div class="row">
-      <div {{ content_attributes.addClass(content_classes) }}>
-
-        <!-- page top section -->
-        {% if page.content_top %}
-          {{ page.content_top }}
-        {% endif %}
-        <!-- page top section -->
-
-        {{ page.content }}
-
-        <!-- page bottom section -->
-        {% if page.content_bottom %}
-          {{ page.content_bottom }}
-        {% endif %}
-        <!-- page bottom section -->
-
-      </div>
-
-      {% if page.sidebar_right %}
-        <div class="col-md-3 sidebar">
-          {% block sidebar_right %}
-            <aside role="complementary">
-              {{ page.sidebar_right }}
-            </aside>
-          {% endblock %}
-        </div>
+    <!-- If sample blocks enable -->
+    {% if electra.display_sample_blocks %}
+      {% if is_front %}
+        {{ include('@electra/samples/parallax-block.html.twig', ignore_missing = true) }}
       {% endif %}
+    {% endif %}
+    <!-- end sample blocks enable -->
 
+    {% if not is_front %}
+      {% if page.content_header %}
+        {{page.content_header }}
+      {% endif %}
+    {% endif %}
+
+    <!-- top Fluid section -->
+    {% if page.content_top_fluid %}
+      {{ page.content_top_fluid }}
+    {% endif %}
+    <!-- end top fluid section -->
+
+    {%
+            set content_classes = [
+              page.sidebar_right ? 'col-md-9',
+              page.sidebar_right is empty ? 'col-md-12'
+            ]
+    %}
+
+    <section class="content-wrapper">
+      <div class="container">
+        <div class="row">
+          <div {{ content_attributes.addClass(content_classes) }}>
+
+            <!-- page top section -->
+            {% if page.content_top %}
+              {{ page.content_top }}
+            {% endif %}
+            <!-- page top section -->
+
+            {{ page.content }}
+
+            <!-- page bottom section -->
+            {% if page.content_bottom %}
+              {{ page.content_bottom }}
+            {% endif %}
+            <!-- page bottom section -->
+
+          </div>
+
+          {% if page.sidebar_right %}
+            <div class="col-md-3 sidebar">
+              {% block sidebar_right %}
+                <aside role="complementary">
+                  {{ page.sidebar_right }}
+                </aside>
+              {% endblock %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom Fluid section -->
+    {% if page.content_bottom_fluid %}
+      {{ page.content_bottom_fluid }}
+    {% endif %}
+    <!-- bottom top fluid section -->
+
+    {% include '@electra/includes/footer.html.twig' %}
+
+  {% if electra.header_position %}
     </div>
+  {% endif %}
+
+{% if electra.header_position == 'header-left' %}
   </div>
-</section>
-
-<!-- bottom Fluid section -->
-{% if page.content_bottom_fluid %}
-  {{ page.content_bottom_fluid }}
 {% endif %}
-<!-- bottom top fluid section -->
-
-{% include '@electra/includes/footer.html.twig' %}

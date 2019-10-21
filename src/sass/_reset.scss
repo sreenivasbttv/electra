@@ -15,6 +15,10 @@ h2 {
   font-size: rem(26px);
 }
 
+img {
+  max-width: 100%;
+}
+
 blockquote {
   position: relative;
   background: $light-grey;
