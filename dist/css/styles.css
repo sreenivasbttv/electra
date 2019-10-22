@@ -11339,3 +11339,36 @@ article .links li:first-child {
 .electra-signin .section-right {
   background-color: #fff;
 }
+
+.page-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  color: #7f7f7f;
+}
+@media (min-width: 992px) {
+  .page-404 h1 {
+    font-size: 6.2rem;
+  }
+  .page-404 h2 {
+    font-size: 3.1rem;
+  }
+  .page-404 h2,
+  .page-404 p {
+    padding-top: 1.5rem;
+  }
+}
+.page-404 a {
+  text-decoration: underline;
+}
