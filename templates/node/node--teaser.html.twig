@@ -73,8 +73,6 @@
  */
 #}
 
-{% set node_has_image = node.field_image.entity.uri.value %}
-
 <article{{ attributes }}>
 
   {{ title_prefix }}
@@ -96,10 +94,7 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-     {% if node_has_image and (electra.page_header_style == 'full-size' or electra.page_header_style == 'box-size') %}
-      {{ content|without('field_image') }}
-     {% else %}
-      {{ content }}
-     {% endif %}
+    {{ content }}
   </div>
+
 </article>

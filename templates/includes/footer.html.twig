@@ -10,7 +10,11 @@
   ]
 %}
 
-<footer class="page-footer bg-light">
+{% if electra.header_position == 'header-left' %}
+  <footer class="page-footer bg-light container">
+{% else %}
+  <footer class="page-footer bg-light">
+{% endif %}
 
   {% if page.footer_top %}
     {{ page.footer_top }}

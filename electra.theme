@@ -45,9 +45,9 @@ function electra_theme_suggestions_block_alter(array &$suggestions, array $varia
 }
 
 /**
- * Implements hook_preprocess_HOOK() for page templates.
+ * Implements hook_preprocess().
  */
-function electra_preprocess_page(&$variables) {
+function electra_preprocess(&$variables) {
   $variables['electra'] = [];
   $electra_settings = [
     'display_sample_blocks',
@@ -60,6 +60,9 @@ function electra_preprocess_page(&$variables) {
     'display_theme_credits',
     'display_social_round_icons',
     'header_position',
+  ];
+  $page_settings = [
+    'page_header_style',
   ];
   $social_profiles = [
     'social_facebook',
@@ -80,6 +83,15 @@ function electra_preprocess_page(&$variables) {
       $variables['electra'][$electra_setting] = Xss::filter($value);
     }
   }
+
+  // Retrieve Page related theme options.
+  foreach ($page_settings as $page_setting) {
+    $value = trim(theme_get_setting($page_setting, 'electra'));
+    if (!empty($value)) {
+      $variables['electra'][$page_setting] = Xss::filter($value);
+    }
+  }
+
   // Retrieve social profiles.
   foreach ($social_profiles as $social_profile) {
     $value = trim(theme_get_setting($social_profile, 'electra'));
@@ -166,7 +178,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
 
   $form['electra_settings']['header_tab']['header_options'] = [
     '#type' => 'details',
-    '#title' => t('Header Options'),
+    '#title' => t('Top Header Options'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
     '#group' => 'tabs',
@@ -224,6 +236,26 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
     '#title' => t('Sticky header resizing'),
     '#default_value' => theme_get_setting('header_type_sticky_resize', 'electra'),
     '#description' => t('Enable the sticky header to resize when scrolling down the page'),
+  ];
+
+  $form['electra_settings']['page_tab']['page_options'] = [
+    '#type' => 'details',
+    '#title' => t('Page Options'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+
+  $form['electra_settings']['page_tab']['page_options']['page_header_style'] = [
+    '#type' => 'select',
+    '#title' => t('Page Header Style'),
+    '#default_value' => theme_get_setting('page_header_style', 'electra'),
+    '#description' => t('Choose page header style. Ex. default, Full size, Box size. If node has field_image field then image shown as background for full and box sizes.'),
+    '#options' => [
+      'default' => t('Default'),
+      'full-size' => t('Full Size'),
+      'box-size' => t('Box Size'),
+    ],
   ];
 
   $form['electra_settings']['social_tab']['social_profiles'] = [

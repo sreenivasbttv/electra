@@ -10793,7 +10793,6 @@ details .fieldgroup legend {
     margin-top: 0rem;
   }
   .main-content-wrapper .container {
-    max-width: 100%;
     width: 100%;
   }
   .main-content-wrapper .navbar .nav-item .nav-link {
@@ -10837,6 +10836,46 @@ details .fieldgroup legend {
     right: 0;
     font-size: 1.375rem;
   }
+}
+
+.page-header-wrapper {
+  position: relative;
+}
+.page-header-wrapper.has-image {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-header-wrapper.has-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.page-header-wrapper.has-image h1,
+.page-header-wrapper.has-image h2,
+.page-header-wrapper.has-image h3,
+.page-header-wrapper.has-image h4,
+.page-header-wrapper.has-image h5,
+.page-header-wrapper.has-image h6,
+.page-header-wrapper.has-image p,
+.page-header-wrapper.has-image span,
+.page-header-wrapper.has-image div,
+.page-header-wrapper.has-image a,
+.page-header-wrapper.has-image .nav-link {
+  color: white;
+}
+.page-header-wrapper.has-image .nav-link.is-active,
+.page-header-wrapper.has-image .nav-link.active {
+  color: initial;
+}
+.page-header-wrapper.has-image.container {
+  padding: 0;
+}
+.page-header-wrapper.has-image .page-header {
+  height: 28.125rem;
 }
 
 .parallax-block {
@@ -11191,6 +11230,14 @@ article .links li:first-child {
 .page-header h1 {
   max-width: 85%;
   margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .page-header .page-title,
+  .page-header h1 {
+    max-width: 95%;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
 }
 .page-header .block-local-tasks-block {
   position: absolute;

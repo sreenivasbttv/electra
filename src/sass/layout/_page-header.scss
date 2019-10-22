@@ -16,6 +16,12 @@
   h1 {
     max-width: 85%;
     margin: 0 auto;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 95%;
+      font-size: rem(24px);
+      line-height: rem(30px);
+    }
   }
 
   .block-local-tasks-block {
