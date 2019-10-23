@@ -10554,6 +10554,102 @@ a.text-dark:focus {
   letter-spacing: 1px;
 }
 
+.comments-wrapper,
+.js-comment {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+@media (min-width: 768px) {
+  .comments-wrapper,
+  .js-comment {
+    padding: 20px;
+  }
+}
+.comments-wrapper .comments-title,
+.js-comment .comments-title {
+  text-align: center;
+  border-bottom: 1px solid #5d5d5d;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+.comments-wrapper .comments-title span,
+.js-comment .comments-title span {
+  background: #f9f9f9;
+  padding: 0 10px;
+}
+.comments-wrapper .comment-form-title,
+.js-comment .comment-form-title {
+  margin-bottom: 10px;
+}
+.comments-wrapper h2,
+.js-comment h2 {
+  font-size: 24px;
+}
+.comments-wrapper .indented,
+.js-comment .indented {
+  margin-left: 20px;
+}
+.comments-wrapper article footer,
+.js-comment article footer {
+  margin-bottom: 0.5rem;
+  font-size: 10px;
+}
+.comments-wrapper article h3,
+.js-comment article h3 {
+  font-size: 20px;
+}
+@media (max-width: 767.98px) {
+  .comments-wrapper .comment-content,
+  .js-comment .comment-content {
+    clear: both;
+  }
+}
+@media (min-width: 768px) {
+  .comments-wrapper .comment-content .links,
+  .js-comment .comment-content .links {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 8px 0;
+  }
+}
+.comments-wrapper .author-pic > article,
+.js-comment .author-pic > article {
+  float: left;
+  margin-right: 20px;
+}
+.comments-wrapper .author-pic div,
+.js-comment .author-pic div {
+  display: inline-block;
+}
+.comments-wrapper .author-pic img,
+.js-comment .author-pic img {
+  border-radius: 50%;
+}
+
+.article-author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.article-author-info > article {
+  float: left;
+}
+.article-author-info .field--name-user-picture {
+  display: inline-block;
+}
+.article-author-info .field--name-user-picture img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
 .filter-wrapper {
   border-top: 1px solid #ccc;
 }
