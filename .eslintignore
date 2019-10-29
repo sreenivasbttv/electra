@@ -1,2 +1,3 @@
 /dist/vendors/**/*.js
 gulpfile.js
+**/dist/**

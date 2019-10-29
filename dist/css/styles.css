@@ -10692,7 +10692,7 @@ form .form-check-input {
 form .link-edit-summary {
   font-size: 10px;
   background-color: transparent;
-  border: 0;
+  border: none;
   text-decoration: underline;
 }
 
@@ -11036,7 +11036,7 @@ details .fieldgroup legend {
 .page-header-wrapper.has-image div,
 .page-header-wrapper.has-image a,
 .page-header-wrapper.has-image .nav-link {
-  color: white;
+  color: #fff;
 }
 .page-header-wrapper.has-image .nav-link.is-active,
 .page-header-wrapper.has-image .nav-link.active {

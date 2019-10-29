@@ -8,6 +8,7 @@
     .nav-item {
       &.active {
         border-bottom: 1px solid $grey;
+
         a {
           font-weight: bold;
         }

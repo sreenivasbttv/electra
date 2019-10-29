@@ -12,12 +12,12 @@ form {
   .link-edit-summary {
     font-size: 10px;
     background-color: transparent;
-    border: 0;
+    border: none;
     text-decoration: underline;
   }
 
   .form-control-file {
-    input[type="file"]::-webkit-file-upload-button {
+    input[type='file']::-webkit-file-upload-button { // sass-lint:disable-line force-attribute-nesting
       font-size: 12px;
     }
   }

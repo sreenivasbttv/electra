@@ -28,7 +28,7 @@ blockquote {
   font-style: italic;
   font-weight: 500;
   border-left: rem(2px) solid $dark-grey;
-  quotes: "“" "”" "‘" "’";
+  quotes: '“' '”' '‘' '’';
 
   p,
   span {

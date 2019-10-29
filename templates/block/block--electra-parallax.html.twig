@@ -5,11 +5,11 @@
  *
  */
 #}
-{% set type = content.field_electra_parallax_type.0|render %}
-{% set gradient_style = content.field_electra_color_type.0|render %}
-{% set bg_image_url = content.field_electra_parallax_bg_image['#items'].entity.uri.value %}
-{% set bg_image_type = content.field_electra_parallax_bg_type.0|render %}
-{% set extra_class = content.field_extra_class.0|render %}
+{% set type = content['#block_content'].field_electra_parallax_type.value %}
+{% set gradient_style = content['#block_content'].field_electra_color_type.value %}
+{% set bg_image_url = file_url(content['#block_content'].field_electra_parallax_bg_image.entity.uri.value) %}
+{% set bg_image_type = content['#block_content'].field_electra_parallax_bg_type.value %}
+{% set extra_class = content['#block_content'].field_extra_class.value %}
 
 {%
   set classes = [
@@ -57,7 +57,7 @@
       <div class="row">
               <div class="col-md-12">
                     <div class="parallax-content text-center">
-                        {{content.body.0}}
+                        {{content['#block_content'].body.value|raw }}
                     </div>
               </div>   
       </div>
