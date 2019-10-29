@@ -202,7 +202,7 @@ function electra_form_system_theme_settings_alter(&$form, FormStateInterface $fo
   ];
 
   $form['electra_settings']['header_tab']['header_options']['header_position'] = [
-   '#type' => 'select',
+    '#type' => 'select',
     '#title' => t('Header Position'),
     '#default_value' => theme_get_setting('header_position', 'electra'),
     '#description' => t('Choose header position'),

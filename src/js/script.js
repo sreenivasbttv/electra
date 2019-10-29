@@ -7,7 +7,7 @@
       if ($el.hasClass('standard') || $('nav').hasClass('header-left') || ($el.hasClass('overlay') && $win.width() < 992)) {
         $el.css('background', $el.data('bgcolor'));
       }
-    },
+    }
   };
 
   // convert hex color codes to rgba
