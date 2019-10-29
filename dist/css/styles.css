@@ -10554,6 +10554,11 @@ a.text-dark:focus {
   letter-spacing: 1px;
 }
 
+.chosen-container {
+  width: 100% !important;
+  min-width: 100px;
+}
+
 .comments-wrapper,
 .js-comment {
   margin-top: 20px;
@@ -10650,6 +10655,20 @@ a.text-dark:focus {
   margin-right: 20px;
 }
 
+.dropbutton-widget {
+  padding: 5px 32px 5px 5px;
+  border: 1px solid #f7f7f7;
+  background-color: #fff;
+}
+
+.dropbutton .dropbutton-toggle {
+  background-color: #f7f7f7;
+}
+
+.dropbutton .dropbutton-action {
+  padding-right: 32px;
+}
+
 .field.field--label-inline .field--label {
   display: inline-block;
   float: left;
@@ -10670,6 +10689,39 @@ form .form-check-input {
   position: inherit;
 }
 
+form .link-edit-summary {
+  font-size: 10px;
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline;
+}
+
+form .form-control-file input[type='file']::-webkit-file-upload-button {
+  font-size: 12px;
+}
+
+form label {
+  font-weight: 700;
+}
+
+form .filter-wrapper {
+  margin-bottom: 1rem;
+}
+
+select {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ced4da;
+}
+select.filter-list {
+  width: auto;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
 fieldset,
 details {
   border: 1px solid #ced4da;
@@ -10688,6 +10740,23 @@ details legend {
 fieldset .fieldgroup legend,
 details .fieldgroup legend {
   padding: 0;
+}
+
+.nav.secondary {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.nav.secondary .nav-item.active {
+  border-bottom: 1px solid #ccc;
+}
+.nav.secondary .nav-item.active a {
+  font-weight: bold;
 }
 
 .nav-tabs.tab-basic {
@@ -11087,6 +11156,64 @@ details .fieldgroup legend {
 }
 .brand-bg-icons a.youtube {
   background: #c4302b;
+}
+
+table {
+  width: 100%;
+  margin: 1rem 0;
+}
+table th,
+table td {
+  padding: 8px 10px;
+  line-height: 1.5;
+}
+table thead th,
+table tbody th {
+  font-weight: 500;
+}
+table thead th {
+  white-space: nowrap;
+}
+
+.table-responsive {
+  position: relative;
+}
+
+.views-exposed-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767.98px) {
+  .views-exposed-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+.views-exposed-form .form-item,
+.views-exposed-form .form-actions {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .views-exposed-form .form-item,
+  .views-exposed-form .form-actions {
+    margin-bottom: inherit;
+  }
+}
+@media (max-width: 767.98px) {
+  .views-exposed-form .form-item {
+    width: 100%;
+  }
 }
 
 .view-frontpage article .article-inner-wrapper {
